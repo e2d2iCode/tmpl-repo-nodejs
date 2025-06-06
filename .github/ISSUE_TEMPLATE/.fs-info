@@ -1,0 +1,84 @@
+<!-- .github/ISSUE_TEMPLATE/.fs-info -->
+# FS-INFO - ISSUE_TEMPLATE Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.github/ISSUE_TEMPLATE/` folder is the central directory for managing GitHub issue templates. It provides predefined forms that guide users in submitting various types of issues, ensuring clarity and uniformity in the information provided.
+
+By centralizing issue templates, this folder simplifies the process of issue reporting and helps maintain a well-organized workflow for project contributors and maintainers.
+
+## Folder's Role
+
+The `.github/ISSUE_TEMPLATE/` folder plays a crucial role in organizing and standardizing the process of issue reporting for the project. It ensures that all issues, whether they pertain to bugs, feature requests, or general feedback, are submitted in a structured and consistent manner. This approach not only streamlines communication between contributors and maintainers but also enhances the efficiency of issue resolution.
+
+By providing predefined templates, this folder reduces ambiguity and ensures that all necessary information is included when reporting an issue. This helps maintainers quickly understand the context, prioritize tasks, and address concerns effectively. Additionally, the folder fosters a collaborative environment by making it easier for contributors to participate in the project's development and maintenance.
+
+## Folder's Typical Content
+
+This folder contains templates that cater to different types of issues. Each template is tailored to address specific needs, ensuring that all aspects of project management are covered.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.github/ISSUE_TEMPLATE/` folder:
+
+```tree
+.github/ISSUE_TEMPLATE/
+├── bug_report.md              # Template for reporting bugs
+├── feature_request.md         # Template for suggesting new features
+├── general_comment.md         # Template for general comments or questions
+├── misconduct_report.md       # Template for reporting Conduct violations
+└── vulnerability_report.md    # Template for reporting vulnerabilities
+```
+
+The following sections provide a comprehensive overview of the files within the `.github/ISSUE_TEMPLATE/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `.github/ISSUE_TEMPLATE/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the project.
+
+#### bug_report.md
+
+This template is used to report bugs in the project. It includes sections for describing the bug, steps to reproduce it, and the expected behavior. Key responsibilities include:
+
+- Ensuring that all bug reports are detailed and actionable.
+- Providing a consistent format for reporting issues.
+- Helping maintainers prioritize and address bugs efficiently.
+
+#### feature_request.md
+
+This template is used to suggest new features or improvements. It provides sections for describing the problem, the proposed solution, and any alternatives considered. Key responsibilities include:
+
+- Encouraging contributors to propose enhancements in a structured manner.
+- Facilitating discussions around potential features.
+- Helping maintainers evaluate and implement new ideas effectively.
+
+#### general_comment.md
+
+This template is used for general comments or questions about the project. It includes options to specify the topic and leave feedback. Key responsibilities include:
+
+- Providing a platform for contributors to share their thoughts or ask questions.
+- Ensuring that all feedback is documented and accessible.
+- Promoting open communication within the project.
+
+#### misconduct_report.md
+
+This template is used to report behavior that violates the project's Code of Conduct. It includes sections for describing the misconduct, providing evidence, and listing those involved. Key responsibilities include:
+
+- Ensuring that all reports of misconduct are handled with care and confidentiality.
+- Promoting a safe and inclusive environment for all contributors.
+- Helping maintainers address and resolve issues related to conduct violations.
+
+#### vulnerability_report.md
+
+This template is used to report security vulnerabilities. It includes sections for describing the vulnerability, steps to reproduce it, and the expected behavior. Key responsibilities include:
+
+- Ensuring that all security concerns are reported promptly and accurately.
+- Helping maintainers address vulnerabilities to protect the project and its users.
+- Promoting a culture of security awareness within the project.
+
+### Subfolders Description
+
+The `.github/ISSUE_TEMPLATE/` folder doesn't contain any subfolder.

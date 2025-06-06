@@ -1,0 +1,66 @@
+<!-- .github/workflows/.fs-info -->
+# FS-INFO - Workflows Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.github/workflows/` folder is the central directory for managing GitHub workflows. It contains predefined workflows that automate various tasks, such as generating changelogs, greeting contributors, and labeling pull requests. These workflows streamline project management and enhance collaboration by automating repetitive tasks.
+
+By centralizing workflows in this folder, the project ensures consistency and efficiency in handling contributions and maintaining the repository.
+
+## Folder's Role
+
+The `.github/workflows/` folder plays a vital role in automating and organizing key processes within the project. It serves as a repository for workflow files that define actions to be executed automatically in response to specific events, such as opening a pull request or merging changes. These workflows reduce manual effort, improve accuracy, and ensure that best practices are consistently applied across the project.
+
+Additionally, this folder fosters a more welcoming and efficient environment for contributors. Automated workflows, such as greeting new contributors or labeling pull requests, help maintainers focus on higher-value tasks while ensuring that contributors receive timely and consistent feedback. By leveraging GitHub Actions, the workflows in this folder enhance the overall productivity and quality of the project.
+
+## Folder's Typical Content
+
+This section provides an overview of the typical structure and contents of the `.github/workflows/` folder.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.github/workflows/` folder:
+
+```tree
+.github/workflows/
+├── changelog.yaml          # Workflow for generating changelogs
+├── greetings.yml           # Workflow for greeting new contributors
+└── label.yml               # Workflow for labeling pull requests
+```
+
+The following sections provide a comprehensive overview of the files within the `.github/workflows/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `.github/workflows/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the workflows.
+
+#### changelog.yaml
+
+This workflow automates the generation of changelogs for the project. It ensures that all changes are documented in a structured format, making it easier for contributors and users to track updates. Key responsibilities include:
+
+- Automatically compiling a list of changes based on merged pull requests.
+- Formatting the changelog to ensure readability and consistency.
+- Reducing the manual effort required to maintain accurate project documentation.
+
+#### greetings.yml
+
+This workflow sends automated greetings to contributors when they open their first issue or pull request. It helps create a welcoming environment for new participants. Key responsibilities include:
+
+- Detecting first-time contributors.
+- Sending personalized messages to acknowledge their contributions.
+- Encouraging further engagement with the project.
+
+#### label.yml
+
+This workflow automatically applies labels to pull requests based on predefined rules. It helps maintainers categorize and prioritize contributions efficiently. Key responsibilities include:
+
+- Analyzing pull request metadata to determine appropriate labels.
+- Applying labels to streamline the review and merging process.
+- Ensuring consistency in labeling across the repository.
+
+### Subfolders Description
+
+The `.github/workflows/` folder doesn't contain any subfolder.

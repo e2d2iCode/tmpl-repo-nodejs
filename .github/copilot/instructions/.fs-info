@@ -1,0 +1,60 @@
+<!-- .github/copilot/instructions/.fs-info -->
+# FS-INFO - Copilot Instructions Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.github/copilot/instructions/` folder is dedicated to storing instruction and configuration files that guide automated tools, such as GitHub Copilot, on how to generate, format, and manage code and documentation within the repository. Its contents are structured to ensure consistency and clarity in code generation and documentation practices.
+
+## Folder's Role
+
+This folder serves as a centralized location for all instruction files that define conventions, templates, and rules for code and documentation generation. It enables automated tools to follow project-agnostic standards and ensures that generated content adheres to the repository's guidelines.
+
+## Folder's Typical Content
+
+The folder typically contains Markdown files that specify instructions for formatting, file structure, and content organization. These files are referenced by automation tools to enforce consistent practices across the codebase.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.github/copilot/instructions/` folder:
+
+```plaintext
+.github/copilot/instructions/
+├── fs-info.instructions.md
+├── markdown.instructions.md
+├── python.instructions.md
+├── naming-conventions.instructions.md
+└── commit-message.instructions.md
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `.github/copilot/instructions/` directory.
+
+### Files Description
+
+The typical files to be found in the `.github/copilot/instructions/` folder are as follows.
+
+#### The `fs-info.instructions.md` file
+
+This file provides detailed instructions and a template for creating `.fs-info` files. It ensures that all `.fs-info` files across the repository are consistent, project-agnostic, and clearly document the role and contents of each folder.
+
+#### The `markdown.instructions.md` file
+
+This file specifies formatting and structural guidelines for all Markdown files, including `.fs-info` files. It covers rules for headings, spacing, code blocks, and special formatting requirements to maintain clarity and consistency.
+
+#### The `python.instructions.md` file
+
+This file provides guidelines and conventions for generating and formatting Python code. It may include rules for code style, structure, and best practices specific to Python files.
+
+#### The `naming-conventions.instructions.md` file
+
+This file outlines naming conventions for files, folders, variables, and other entities within the repository. It helps ensure consistency and clarity in naming across the codebase.
+
+#### The `commit-message.instructions.md` file
+
+This file specifies the required format and content for commit messages. It may include rules for structure, allowed keywords, and examples to guide contributors in writing clear and consistent commit messages.
+
+### Subfolders Description
+
+The `.github/copilot/instructions/` folder doesn't contain any subfolder.

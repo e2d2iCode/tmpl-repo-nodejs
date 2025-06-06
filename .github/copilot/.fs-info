@@ -1,0 +1,48 @@
+<!-- .github/copilot/.fs-info -->
+# FS-INFO - GitHub Copilot Folder
+
+!!!Note
+    This file provides an overview of the `.github/copilot/` folder's role and **typical** content. If available, project-specific documentation can be found in the folder's `README`.
+
+## Overview
+
+The `.github/copilot/` folder is dedicated to storing configuration files, documentation, and resources related to GitHub Copilot usage within the repository. These files can include Copilot-specific settings, usage guidelines, or automation instructions to help contributors and maintainers make the most of Copilot's features.
+
+Centralizing Copilot-related files in this folder ensures clarity, consistency, and easier maintenance of Copilot configuration and documentation.
+
+## Folder's Role
+
+The `.github/copilot/` folder plays a key role in managing Copilot integration and guidance for the project. By providing a single location for Copilot-related templates and resources, it enables maintainers to:
+
+- Standardize Copilot configuration and usage instructions.
+- Simplify updates to Copilot-related guidance or settings.
+- Improve clarity and accessibility of Copilot documentation for contributors.
+
+This organization helps maintain a professional and cohesive approach to Copilot integration and contributor support in the repository.
+
+## Folder's Typical Content
+
+This folder typically contains configuration files, Markdown documentation, and supporting resources related to GitHub Copilot.
+
+### Folder's Typical Tree Structure
+
+Below is an example structure of the `.github/copilot/` folder:
+
+```tree
+.github/copilot/
+├── .fs-info              # Documentation describing the folder's purpose and contents
+├── copilot-settings.yml  # Copilot configuration file (if applicable)
+├── usage-guidelines.md   # Best practices and usage instructions for Copilot
+└── faq.md                # Frequently asked questions about Copilot usage in the project
+```
+
+The following sections provide a brief overview of the files within the `.github/copilot/` directory.
+
+### Files Description
+
+- **.fs-info**: This documentation file describes the purpose and contents of the `.github/copilot/` folder.
+- **copilot-settings.yml**: Configuration file for customizing Copilot's behavior in the repository.
+- **usage-guidelines.md**: Instructions and best practices for using Copilot effectively within the project.
+- **faq.md**: Answers to common questions about Copilot usage and integration.
+
+> **Note:** The actual files and their purposes may vary depending on the project's needs. Refer to each file for specific usage details.

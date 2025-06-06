@@ -1,0 +1,251 @@
+<!-- ./__tests__/.fs-info -->
+# FS-INFO - Tests Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, project-specific test documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `__tests__/` folder is dedicated to the automated testing of the project. It serves as a centralized location for all test suites, test utilities, fixtures, and mocks that verify the correctness and reliability of the project's codebase. This folder is typically recognized by most JavaScript/TypeScript test runners (such as Jest, Mocha, etc.) as the default location for test files.
+
+By maintaining comprehensive and well-organized tests in this folder, the project ensures that code changes can be validated quickly, regressions are caught early, and contributors can confidently refactor or extend the codebase.
+
+## Folder's Role
+
+The `__tests__/` folder plays a crucial role in:
+
+- Housing unit, integration, and end-to-end tests
+- Providing test utilities, fixtures, and mocks
+- Organizing tests to mirror the project's source code structure
+- Supporting continuous integration and automated quality checks
+
+This folder is intended to be the go-to resource for anyone seeking to run, review, or contribute to the project's tests.
+
+## Typical Content
+
+Test files are typically named with a `.test.js`, `.spec.ts`, or similar suffix, and are organized to reflect the structure of the source code they test. The folder may also contain subfolders for grouping related tests, as well as files for shared test setup and configuration.
+
+### Typical Tree Structure
+
+```text
+__tests__/
+├── unit/                # Unit tests for individual modules
+│   ├── foo.test.js
+│   └── ...
+│
+├── integration/         # Integration tests for combined components
+│   ├── bar.spec.ts
+│   └── ...
+│
+├── fixtures/            # Static data used in tests
+│   └── ...
+│
+├── mocks/               # Mock implementations for dependencies
+│   └── ...
+│
+├── setup.js             # Global test setup (if needed)
+├── utils.js             # Test utility functions
+└── ...                  # Additional test files or folders
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `__tests__/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the root folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the project.
+
+#### \*.test.js / \*.spec.ts
+
+  Individual test files containing test cases for specific modules or features.
+
+#### setup.js
+
+  Optional file for configuring the test environment before tests run (e.g., global mocks, environment variables).
+
+#### utils.js
+
+  Utility functions shared across multiple test files.
+
+### Subfolders Description
+
+This section provides a quick explanation of each folder within the root directory. Detailed information is provided in their dedicated `.fs-info` files, if available.
+
+#### unit/
+
+Contains unit tests that verify the behavior of individual functions, classes, or modules in isolation. A common practice is to keep unit tests as direct sibblings of the code they test, or within a local `__tests__` sharing the same parent folder than the code they test.
+
+**Best Practices:**
+
+- Each test should focus on a single function, method, or class, ensuring that it behaves as expected under various conditions.
+- Use descriptive test names that clearly state the behavior being tested.
+- Avoid dependencies on external systems (e.g., databases, APIs); use mocks or stubs as needed.
+- Keep tests fast and deterministic to enable frequent execution.
+
+**Naming Conventions:**
+
+- Test files should be named after the module they test, with a `.test.js`, `.test.ts`, or similar suffix (e.g., `mathUtils.test.js`).
+- Group related tests within the same file or subfolder for clarity.
+
+**What to Test:**
+
+- Function outputs for given inputs (including edge cases and error conditions).
+- Class methods and their side effects.
+- Exception handling and input validation.
+- Pure logic and utility functions.
+
+**Example Structure:**
+
+```text
+unit/
+├── mathUtils.test.js      # Tests for math utility functions
+├── stringHelpers.test.ts  # Tests for string manipulation helpers
+└── myClass.test.ts        # Tests for a specific class
+```
+
+**Example Test Case:**
+
+```js
+// mathUtils.test.js
+const { add } = require('../src/mathUtils');
+
+test('add returns the sum of two numbers', () => {
+  expect(add(2, 3)).toBe(5);
+});
+```
+
+#### integration/
+
+Contains integration tests that verify the interaction between multiple components or modules. Integration tests typically simulate real-world scenarios by combining several units of code and checking their behavior as a group. These tests may involve database access, API calls, or other external systems, but often use test doubles or mocks to isolate dependencies.
+
+**Best Practices:**
+
+- Test the interaction between multiple modules or services.
+- Simulate realistic workflows and data flows.
+- Use mocks or stubs for external dependencies to keep tests reliable and fast.
+- Ensure tests are repeatable and do not depend on external state.
+- Clean up any state or resources created during tests.
+
+**Naming Conventions:**
+
+- Test files should be named with `.spec.js`, `.spec.ts`, or `.integration.test.js` suffixes (e.g., `userApi.spec.ts`).
+- Organize files to mirror the structure of the main source code for clarity.
+
+**What to Test:**
+
+- End-to-end flows involving multiple components.
+- API endpoints and their integration with services or databases.
+- Data persistence and retrieval across modules.
+- Error handling and edge cases in integrated scenarios.
+
+**Example Structure:**
+
+```text
+integration/
+├── userApi.spec.ts         # Tests for user API endpoints and service integration
+├── paymentFlow.integration.test.js  # End-to-end payment flow tests
+└── ...
+```
+
+**Example Test Case:**
+
+```js
+// userApi.spec.ts
+import request from 'supertest';
+import app from '../../src/app';
+
+describe('User API Integration', () => {
+  it('should create and retrieve a user', async () => {
+    const res = await request(app).post('/users').send({ name: 'Alice' });
+    expect(res.status).toBe(201);
+    const user = res.body;
+    const getRes = await request(app).get(`/users/${user.id}`);
+    expect(getRes.body.name).toBe('Alice');
+  });
+});
+```
+
+#### fixtures/
+
+Holds static data, such as JSON files or sample inputs, used to drive tests. Fixtures provide consistent and repeatable data for tests, ensuring reliability and reproducibility.
+
+**Best Practices:**
+
+- Store fixtures in formats like JSON, YAML, or CSV for easy loading.
+- Use descriptive filenames and organize by feature or test type.
+- Keep fixture data minimal and focused on the test scenario.
+- Update fixtures as requirements or data models change.
+
+**Naming Conventions:**
+
+- Name files after the data or scenario they represent (e.g., `validUser.json`, `ordersList.yaml`).
+- Group related fixtures in subfolders if needed.
+
+**What to Include:**
+
+- Sample datasets for database seeding.
+- Example API responses or request payloads.
+- Files for file upload/download tests.
+- Scripts to generate or reset fixture data.
+
+**Example Structure:**
+
+```text
+fixtures/
+├── users.json           # Sample user data
+├── orders.yaml          # Example orders dataset
+└── files/
+    └── sample.txt       # File used in upload tests
+```
+
+**Example Fixture File:**
+
+```json
+// users.json
+[
+  { "id": 1, "name": "Alice" },
+  { "id": 2, "name": "Bob" }
+]
+```
+
+#### mocks/
+
+Contains mock implementations or stubs for external dependencies, services, or APIs used during testing. Mocks are used to replace real modules or services with controlled, predictable substitutes.
+
+**Best Practices:**
+
+- Mock only what is necessary to isolate the code under test.
+- Keep mocks simple and focused on the test scenario.
+- Use libraries like Jest or Sinon for creating mocks and spies.
+- Document the purpose of each mock for maintainability.
+
+**Naming Conventions:**
+
+- Name files after the dependency or service being mocked (e.g., `db.mock.js`, `emailService.mock.ts`).
+- Organize mocks by feature or dependency.
+
+**What to Include:**
+
+- Mock classes, functions, or objects for external modules.
+- Mock server implementations for API endpoints.
+- Utility functions to create or configure mocks dynamically.
+
+**Example Structure:**
+
+```text
+mocks/
+├── db.mock.js              # Mock database module
+├── emailService.mock.ts    # Mock email service
+└── api/
+    └── paymentApi.mock.js  # Mock payment API endpoints
+```
+
+**Example Mock File:**
+
+```js
+// db.mock.js
+module.exports = {
+  connect: jest.fn(),
+  findUser: jest.fn().mockResolvedValue({ id: 1, name: 'Alice' }),
+  saveUser: jest.fn()
+};
+```

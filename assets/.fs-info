@@ -1,0 +1,81 @@
+<!-- assets/.fs-info -->
+# FS-INFO - Assets Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `assets/` folder is the main directory for static assets used in the application. It houses all the essential multimedia and visual resources required to enhance the application's functionality and user experience. This folder is structured to ensure efficient delivery and caching of static files, aligning with web development best practices.
+
+By organizing the static assets in this folder, the project maintains a clear separation of concerns, making it easier for developers to manage and update resources.
+
+## Folder's Role
+
+The `assets/` folder plays a critical role in the application's multimedia and visual elements. It serves as the central hub for all static resources, including audio files, icons, images, and videos. By adhering to a well-defined structure, this folder ensures that the development process remains organized and efficient.
+
+Additionally, the folder's structure is designed to facilitate collaboration among developers. By categorizing assets by type, it simplifies navigation and ensures consistency in resource management. This approach minimizes confusion, enhances productivity, and ensures that the application's multimedia and visual needs are met effectively.
+
+## Folder's Typical Content
+
+The `assets/` folder contains a variety of subfolders that categorize static assets by type. Below is an overview of its structure and contents.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `assets/` folder:
+
+```tree
+assets/
+├── audio/                  # Contains essential audio files
+│   ├── file-1.mp3            # Example audio file
+│   ├── file-2.wav            # Example audio file
+│   ├── ...
+│   └── README.md             # Specific doc for the assets/audio/ folder
+│
+├── icons/                  # Contains icon files used across the application
+│   ├── icon1.svg             # Example icon file
+│   ├── icon2.svg             # Example icon file
+│   ├── ...
+│   └── README.md             # Specific doc for the assets/icons/ folder
+│
+├── images/                 # Contains image files for visual content
+│   ├── icons/                # Subfolder for icon files
+│   ├── backgrounds/          # Subfolder for background images
+│   ├── logos/                # Subfolder for logo files
+│   ├── sample-image1.png     # Example image file
+│   ├── sample-image2.png     # Example image file
+│   ├── ...
+│   └── README.md             # Specific doc for the assets/images/ folder
+│
+├── videos/                 # Contains video files for multimedia functionality
+│   ├── video1.mp4            # Example video file
+│   ├── video2.mp4            # Example video file
+│   ├── ...
+│   └── README.md             # Specific doc for the assets/videos/ folder
+│
+├── <other-subfolders>/     # Additional asset subfolders, if any
+│
+└── README.md               # Specific doc for the assets/ folder
+```
+
+The following sections provide a comprehensive overview of the subfolders within the `assets/` directory.
+
+### Subfolders Description
+
+This section provides a quick explanation of each subfolder within the `assets/` folder. Detailed information is provided in their dedicated `.fs-info` files, if available.
+
+#### audio/
+
+The `audio/` subfolder contains audio files such as background music, sound effects, and voiceovers. These files are used to provide auditory feedback and enhance the application's interactivity.
+
+#### icons/
+
+The `icons/` subfolder stores icon files used throughout the application, including social media icons, navigation icons, and other graphical elements.
+
+#### images/
+
+The `images/` subfolder houses image files, including application icons, background images, product images, and placeholders. These resources are used to enhance the application's visual appeal.
+
+#### videos/
+
+The `videos/` subfolder contains video files for tutorials, promotional content, and archived recordings. These files are used to provide visual demonstrations and enrich the user experience.

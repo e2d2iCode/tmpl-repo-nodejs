@@ -1,0 +1,10 @@
+[core]
+	editor = code --wait
+[merge]
+	tool = vscode
+[diff]
+	tool = vscode
+[push]
+	default = simple
+[commit]
+	template = .gitmessage

@@ -1,0 +1,46 @@
+<!-- .github/copilot/prompts/.fs-info -->
+# FS-INFO - Copilot Prompts Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.github/copilot/prompts/` folder is intended for storing prompt files used by automated tools, such as GitHub Copilot, to guide code generation, completion, or documentation tasks. These prompts help standardize and automate interactions with AI-based tools across the repository.
+
+## Folder's Role
+
+This folder acts as a centralized location for prompt templates and related files that define how automated tools should interact with users or generate content. It ensures that prompts are consistent, reusable, and easy to maintain.
+
+## Folder's Typical Content
+
+The folder typically contains Markdown or plain text files that define prompts for various coding, documentation, or workflow scenarios. These files are referenced by automation tools to provide context-aware suggestions or actions.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.github/copilot/prompts/` folder:
+
+```plaintext
+.github/copilot/prompts/
+├── feature-request.prompt.md
+├── bug-report.prompt.md
+└── .fs-info
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `.github/copilot/prompts/` directory.
+
+### Files Description
+
+The typical files to be found in the `.github/copilot/prompts/` folder are as follows.
+
+#### The `feature-request.prompt.md` file
+
+This file contains a prompt template for submitting feature requests. It guides users or tools to provide the necessary information for proposing new features in a structured manner.
+
+#### The `bug-report.prompt.md` file
+
+This file contains a prompt template for reporting bugs. It helps ensure that bug reports are complete, clear, and actionable by requesting relevant details from users or tools.
+
+### Subfolders Description
+
+The `.github/copilot/prompts/` folder doesn't contain any subfolder.

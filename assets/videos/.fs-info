@@ -1,0 +1,55 @@
+<!-- assets/videos/.fs-info -->
+# FS-INFO - Public Assets' Videos Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `assets/videos/` folder is located at the root of the application's public assets directory. It is dedicated to housing video files that are essential for the application's multimedia functionality. These videos are directly accessible via the application's URL structure and can be embedded or streamed within the application.
+
+By organizing video files in the root-level `videos/` folder, the project maintains a clear separation of concerns, making it easier to manage and update multimedia content. This structure also facilitates efficient delivery of video assets to the client.
+
+## Folder's Role
+
+The `assets/videos/` folder plays a crucial role in enhancing the application's multimedia experience by providing a centralized location for storing video files. These videos are used across various features or presentations, ensuring a consistent and engaging user experience. By maintaining all video assets in one location, the folder simplifies the process of managing and updating multimedia content, reducing the risk of errors or inconsistencies.
+
+Additionally, this folder supports the application's scalability by enabling efficient delivery of video files to the client. The folder's structure ensures that video assets are easily accessible and can be seamlessly integrated into the application's features. This approach not only improves the application's performance but also enhances its maintainability and adaptability to future requirements.
+
+## Folder's Typical Content
+
+This folder contains video files that are used to provide visual content for the application. The following sections outline the folder's structure and describe its contents.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the root-level `assets/videos/` folder:
+
+```tree
+assets/videos/
+├── video1.mp4          # Example video file
+├── video2.mp4          # Example video file
+├── ...                 # ...
+└── README.md           # Specific documentation for the videos folder
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `assets/videos/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `assets/videos/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the `videos` folder.
+
+#### video1.mp4
+
+The `video1.mp4` file is an example video used to demonstrate the application's multimedia capabilities. It serves as a placeholder or a sample video for testing and development purposes.
+
+#### video2.mp4
+
+The `video2.mp4` file is another example video that complements the application's multimedia features. Like `video1.mp4`, it is used for testing and showcasing the application's ability to handle video content.
+
+#### README.md
+
+The `README.md` file provides specific documentation for the `assets/videos/` folder. It includes details about the folder's purpose, structure, and guidelines for adding or managing video files.
+
+### Subfolders Description
+
+The root-level `assets/videos/` folder does not contain any subfolders by default.

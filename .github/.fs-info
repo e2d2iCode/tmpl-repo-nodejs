@@ -1,0 +1,78 @@
+<!-- .github/.fs-info -->
+# FS-INFO - GitHub Configuration Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.github/` folder is a central directory for managing GitHub-specific configurations and templates. It provides resources that guide contributors in reporting issues, submitting pull requests, and automating workflows, ensuring a structured and organized approach to project management.
+
+By centralizing these resources, the `.github/` folder simplifies collaboration and helps maintain a well-organized workflow for project contributors and maintainers.
+
+## Folder's Role
+
+The `.github/` folder plays a crucial role in streamlining project management on GitHub. It contains configuration files and templates that ensure consistency and efficiency in collaboration. By providing standardized resources, such as issue templates and pull request templates, it helps contributors follow best practices and maintainers manage contributions effectively.
+
+Additionally, the folder includes GitHub Actions workflows that automate repetitive tasks, such as labeling pull requests, generating changelogs, and greeting new contributors. These automations reduce manual effort, improve productivity, and foster a welcoming and organized environment for contributors. Overall, the `.github/` folder is essential for maintaining a structured and efficient project workflow.
+
+## Folder's Typical Content
+
+This folder contains various subfolders and files that serve specific purposes, ensuring all aspects of project management are addressed.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.github/` folder:
+
+```tree
+.github/
+├── ISSUE_TEMPLATE/         # Templates for reporting issues
+│   ├── bug_report.md       # Template for reporting bugs
+│   ├── feature_request.md  # Template for requesting features
+│   └── custom.md           # Template for other types of issues
+├── workflows/              # GitHub Actions workflows
+│   ├── changelog.yaml      # Workflow for generating changelogs
+│   ├── greetings.yml       # Workflow for greeting new contributors
+│   └── label.yml           # Workflow for labeling pull requests
+├── dependabot.yml          # Config to automate dependency updates
+├── labeler.yaml            # Automatically label issues and pull requests
+└── pull_request_template   # Template for pull request descriptions
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `.github/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `.github/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the folder.
+
+#### dependabot.yml
+
+Configures automated dependency updates, ensuring that the project stays up-to-date with minimal manual intervention.
+
+#### labeler.yaml
+
+Automatically labels issues and pull requests based on predefined rules, streamlining the categorization process.
+
+#### pull_request_template
+
+A template for pull request descriptions, guiding contributors to provide all necessary details for maintainers to review their changes effectively.
+
+### Subfolders Description
+
+This section provides a quick explanation of each folder within the `.github/` folder. Detailed information is provided in their dedicated `.fs-info` files, if available.
+
+#### ISSUE_TEMPLATE/
+
+The `ISSUE_TEMPLATE/` subfolder contains templates for reporting issues. These templates ensure that all issues are reported in a structured and consistent manner.
+
+- **bug_report.md**: A template for reporting bugs, guiding users to provide detailed and relevant information about the issue.
+- **feature_request.md**: A template for requesting new features, helping contributors articulate their ideas clearly.
+- **custom.md**: A template for other types of issues, offering flexibility for unique or miscellaneous reports.
+
+#### workflows/
+
+The `workflows/` subfolder contains GitHub Actions workflows that automate various tasks to improve project management.
+
+- **changelog.yaml**: Automates the generation of changelogs, ensuring that all changes are documented in a structured format.
+- **greetings.yml**: Sends automated greetings to contributors when they open their first issue or pull request, fostering a welcoming environment.
+- **label.yml**: Automatically applies labels to pull requests based on predefined rules, helping maintainers categorize and prioritize contributions efficiently.

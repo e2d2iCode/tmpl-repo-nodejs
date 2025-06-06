@@ -1,0 +1,59 @@
+<!-- assets/icons/.fs-info -->
+# FS-INFO - Public Assets' Icons Folder
+
+!!!Note
+    This file provides an overview of the root-level `assets/icons` folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The root-level `assets/icons/` folder is designated for storing icon files used throughout the application to enhance the user interface and provide visual cues.
+
+By organizing icons in this dedicated folder, the project maintains a clear separation of assets, making it easier to manage and update the application's visual elements. This structure also facilitates efficient delivery of icons to the client.
+
+## Folder's Role
+
+The root-level `assets/icons/` folder plays a crucial role in managing the application's visual identity. It serves as a centralized repository for all icon assets, ensuring consistency and uniformity across the user interface. By storing icons in a dedicated folder, the project simplifies the process of locating, updating, and maintaining these assets, which is essential for a scalable and maintainable application.
+
+Additionally, this folder supports the application's design system by providing a single source of truth for iconography. This approach minimizes redundancy, reduces the risk of inconsistencies, and ensures that all icons adhere to the project's branding guidelines. The folder's organization also improves collaboration among team members by providing a clear and predictable structure for managing visual assets.
+
+## Folder's Typical Content
+
+This folder contains icon files that are directly accessible via the application's URL structure and are typically used in buttons, menus, and other UI components.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the root-level `assets/icons/` folder:
+
+```tree
+assets/icons/
+├── icon1.svg            # Example icon file
+├── icon2.svg            # Example icon file
+├── ...                  # ...
+└── README.md            # Specific doc for the icons/ folder
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the root-level `assets/icons/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `assets/icons/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the `icons` folder.
+
+#### icon1.svg
+
+The `icon1.svg` file is an example of an SVG icon used in the application. It provides a scalable and lightweight visual element that enhances the user interface. Key responsibilities include:
+
+- Serving as a visual cue in specific UI components.
+- Maintaining high-quality resolution across different screen sizes.
+- Adhering to the project's design and branding guidelines.
+
+#### icon2.svg
+
+The `icon2.svg` file is another example of an SVG icon used in the application. Similar to `icon1.svg`, it contributes to the application's visual consistency and user experience. Key responsibilities include:
+
+- Providing a recognizable and intuitive visual element.
+- Supporting responsive design by scaling seamlessly.
+- Aligning with the overall design system of the application.
+
+### Subfolders Description
+
+The root-level `assets/icons/` folder doesn't contain any subfolder.

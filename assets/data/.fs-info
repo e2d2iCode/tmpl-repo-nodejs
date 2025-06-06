@@ -1,0 +1,56 @@
+<!-- assets/data/.fs-info -->
+# FS-INFO - Public Assets Data Folder
+
+!!!Note
+    This file provides an overview of the root-level `assets/data` folder's role and **typical** content. If available, project-specific documentation is found in the folder's `README.md`.
+
+## Overview
+
+The root-level `assets/data/` folder is dedicated to housing data files that are essential for the application's data-driven features. These files are directly accessible via the application's URL structure and are typically loaded by the application to provide structured data, configuration, or content to users.
+
+By organizing data files in the root `data/` folder, the project maintains a clear separation of concerns, making it easier to manage and update the application's data assets. This structure also facilitates efficient delivery and caching of data files.
+
+## Folder's Role
+
+The root-level `assets/data/` folder plays a crucial role in supporting the application's dynamic features by providing structured data such as JSON, CSV, or other formats. These data assets may include configuration files, datasets, localization files, or other resources that drive the application's behavior and content.
+
+Additionally, this folder ensures that all data-related assets are centralized and well-organized. By maintaining a dedicated location for data files, developers can efficiently manage, update, and expand the application's data-driven features without disrupting other parts of the project. This approach promotes scalability and maintainability, ensuring that the application's data assets remain consistent and accessible.
+
+## Folder's Typical Content
+
+This section provides an overview of the typical structure and contents of the root-level `assets/data/` folder.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the root-level `assets/data/` folder:
+
+```tree
+assets/data/
+├── config.json          # Example configuration file
+├── dataset.csv          # Example dataset file
+├── localization.json    # Example localization file
+├── ...                  # Additional data files
+└── README.md            # Documentation for the data folder
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `assets/data/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `assets/data/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the data folder.
+
+#### config.json
+
+The `config.json` file serves as an example configuration file used to store application settings or options. It is loaded by the application to control various features or behaviors.
+
+#### dataset.csv
+
+The `dataset.csv` file is an example dataset file that provides structured tabular data for use within the application, such as for charts, tables, or data processing.
+
+#### localization.json
+
+The `localization.json` file is an example localization file that contains translations or language-specific content to support internationalization within the application.
+
+### Subfolders Description
+
+The root-level `assets/data/` folder does not contain any subfolders by default.

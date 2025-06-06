@@ -1,0 +1,79 @@
+<!-- ./scripts/.fs-info -->
+# FS-INFO - Scripts Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, project-specific details are to be found in the folder's `README`.
+
+## Overview
+
+The `scripts/` folder is dedicated to automation and utility scripts related to the project. It serves as a centralized location for scripts that help automate tasks such as building, testing, deployment, setup, and maintenance. By organizing scripts in this folder, the project ensures that contributors can easily find and use automation tools, improving workflow efficiency and consistency.
+
+Scripts in this folder are typically written in languages such as Bash, PowerShell, Python, or JavaScript, depending on the project's requirements and target environments.
+
+## Folder's Role
+
+The `scripts/` folder plays a crucial role in:
+
+- Automating build, test, and deployment processes
+- Providing setup and configuration utilities
+- Offering maintenance and housekeeping scripts
+- Centralizing all automation resources that support the project's development and operations
+
+This folder is intended to be the go-to resource for anyone seeking to automate or streamline project-related tasks.
+
+## Typical Content
+
+The scripts are usually organized by purpose or platform, and may include subfolders for grouping related scripts. Each script should be well-documented, either inline or via accompanying `README` files.
+
+### Typical Tree Structure
+
+```text
+scripts/
+├── build/               # Build automation scripts
+│   ├── build.sh           # Example build script (Bash)
+│   └── build.ps1          # Example build script (PowerShell)
+│
+├── deploy/              # Deployment scripts
+│   └── deploy.sh
+│
+├── setup/               # Setup and environment scripts
+│   └── setup-env.sh
+│
+├── utils/               # Utility scripts
+│   └── clean.sh
+│
+├── README.md            # Documentation for scripts usage
+└── ...                  # Additional scripts or folders
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the root directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the root folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the project.
+
+#### README.md
+
+  Provides documentation and usage instructions for the scripts in this folder, including prerequisites and examples.
+
+### Subfolders Description
+
+This section provides a quick explanation of each folder within the `scripts/` directory. Detailed information is provided in their dedicated `.fs-info` files, if available.
+
+#### build/
+
+Contains scripts related to building the project, such as compiling source code, bundling assets, or generating distributable packages.
+
+#### deploy/
+
+Holds scripts for deploying the project to various environments, such as staging, production, or cloud platforms.
+
+#### setup/
+
+Includes scripts for setting up the development environment, installing dependencies, or configuring system settings.
+
+#### utils/
+
+Contains miscellaneous utility scripts for tasks like cleaning build artifacts, running diagnostics, or performing routine maintenance.
+
+Scripts in this folder are intended to be run from the command line and may require appropriate permissions or environment configuration.

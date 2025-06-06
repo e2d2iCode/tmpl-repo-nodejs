@@ -1,0 +1,49 @@
+<!-- assets/images/.fs-info -->
+# FS-INFO - Root Images Folder
+
+!!!Note
+    This file documents the **root-level** `assets/images/` folder, which contains all public image assets for the application. For subfolder-specific documentation, see the respective `README.md` or `.fs-info` files within each subfolder.
+
+## Overview
+
+The `assets/images/` folder is the central repository for all image files used by the application. It is intended for images that are publicly accessible and required for the application's UI, such as icons, backgrounds, and branding assets.
+
+Organizing images in this root folder and its subfolders ensures a clear structure, making it easy to manage, update, and reference visual resources throughout the project.
+
+## Folder's Role
+
+The root `assets/images/` folder:
+
+- Serves as the entry point for all image assets used in the application.
+- Contains both individual image files and subfolders for categorizing images by type or usage (e.g., `icons/`, `backgrounds/`, `logos/`).
+- Facilitates efficient asset management, caching, and delivery.
+
+## Typical Content
+
+The root folder typically contains:
+
+- Example or shared image files (e.g., `sample-image1.png`, `sample-image2.png`).
+- Subfolders for organizing images by category:
+  - `icons/` for UI icons.
+  - `backgrounds/` for background images.
+  - `logos/` for branding assets.
+- A `README.md` file providing documentation for the folder.
+
+### Example Structure
+
+```tree
+assets/images/
+│
+├── icons/                # Icon files (see icons/README.md)
+├── backgrounds/          # Background images (see backgrounds/README.md)
+├── logos/                # Logo files (see logos/README.md)
+├── sample-image1.png     # Example image file
+├── sample-image2.png     # Example image file
+└── README.md             # Documentation for the images/ folder
+```
+
+## Notes
+
+- The root `assets/images/` folder should not contain application code or non-image assets.
+- For details on the contents and usage of each subfolder, refer to their respective documentation files.
+- All images placed here are intended to be publicly accessible and used directly by the application's frontend.

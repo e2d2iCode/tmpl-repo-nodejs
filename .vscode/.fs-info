@@ -1,0 +1,50 @@
+<!-- .github/copilot/.fs-info -->
+# FS-INFO - VS Code Workspace Folder
+
+!!!Note
+    This file provides an overview of the `.vscode/` folder's role and **typical** content. If available, project-specific documentation can be found in the folder's `README`.
+
+## Overview
+
+The `.vscode/` folder is dedicated to storing Visual Studio Code workspace configuration files for the repository. These files can include editor settings, recommended extensions, launch configurations, and tasks to help contributors maintain a consistent development environment.
+
+Centralizing VS Code-related files in this folder ensures clarity, consistency, and easier maintenance of workspace configuration and documentation.
+
+## Folder's Role
+
+The `.vscode/` folder plays a key role in managing editor integration and guidance for the project. By providing a single location for VS Code-specific settings and resources, it enables maintainers to:
+
+- Standardize editor configuration and usage instructions.
+- Simplify updates to workspace-related guidance or settings.
+- Improve clarity and accessibility of editor documentation for contributors.
+
+This organization helps maintain a professional and cohesive approach to workspace integration and contributor support in the repository.
+
+## Folder's Typical Content
+
+This folder typically contains JSON configuration files and supporting resources related to Visual Studio Code.
+
+### Folder's Typical Tree Structure
+
+Below is an example structure of the `.vscode/` folder:
+
+```tree
+.vscode/
+├── .fs-info              # Documentation describing the folder's purpose and contents
+├── settings.json         # Workspace-specific editor settings
+├── extensions.json       # Recommended VS Code extensions for the project
+├── launch.json           # Debugger and launch configurations
+└── tasks.json            # Task runner configurations
+```
+
+The following sections provide a brief overview of the files within the `.vscode/` directory.
+
+### Files Description
+
+- **.fs-info**: This documentation file describes the purpose and contents of the `.vscode/` folder.
+- **settings.json**: Workspace-specific settings for VS Code, such as formatting, linting, or editor preferences.
+- **extensions.json**: List of recommended extensions to enhance the development experience for the project.
+- **launch.json**: Debugger and launch configurations for running and debugging the project.
+- **tasks.json**: Task runner configurations for automating common development workflows.
+
+> **Note:** The actual files and their purposes may vary depending on the project's needs. Refer to each file for specific usage details.

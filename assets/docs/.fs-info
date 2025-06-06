@@ -1,0 +1,61 @@
+<!-- assets/docs/.fs-info -->
+# FS-INFO - Public Assets Docs Folder
+
+!!!Note
+    This file provides an overview of the root-level `assets/docs` folder's role and **typical** content. If available, project-specific documentation is found in the folder's `README.md`.
+
+## Overview
+
+The root-level `assets/docs/` folder is dedicated to housing downloadable document files that are intended for end users or stakeholders. These documents are directly accessible via the application's URL structure and are typically provided for reference, compliance, or informational purposes.
+
+By organizing document files in the root `docs/` folder, the project maintains a clear separation of concerns, making it easier to manage and update the application's downloadable documentation assets. This structure also facilitates efficient delivery and caching of document files.
+
+## Folder's Role
+
+The root-level `assets/docs/` folder plays a crucial role in supporting the application's informational and compliance needs by providing downloadable documents such as PDFs, Word documents, or other formats. These assets may include user manuals, technical documentation, legal notices, licenses, or other resources that need to be distributed to users.
+
+Additionally, this folder ensures that all document-related assets are centralized and well-organized. By maintaining a dedicated location for downloadable documents, developers and content managers can efficiently manage, update, and expand the application's documentation offerings without disrupting other parts of the project. This approach promotes scalability and maintainability, ensuring that the application's document assets remain consistent and accessible.
+
+## Folder's Typical Content
+
+This section provides an overview of the typical structure and contents of the root-level `assets/docs/` folder.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the root-level `assets/docs/` folder:
+
+```tree
+assets/docs/
+├── user-manual.pdf      # Example user manual
+├── api-reference.pdf    # Example API reference document
+├── license.txt          # Example license or legal notice
+├── changelog.pdf        # Example changelog or release notes
+├── ...                  # Additional downloadable documents
+└── README.md            # Documentation for the docs folder
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `assets/docs/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `assets/docs/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the docs folder.
+
+#### user-manual.pdf
+
+The `user-manual.pdf` file serves as an example user manual provided for end users, containing instructions and guidance on using the application.
+
+#### api-reference.pdf
+
+The `api-reference.pdf` file is an example API reference document that provides technical details and usage information for developers integrating with the application's API.
+
+#### license.txt
+
+The `license.txt` file is an example license or legal notice, outlining the terms and conditions for using the application or its assets.
+
+#### changelog.pdf
+
+The `changelog.pdf` file is an example changelog or release notes document, summarizing updates, changes, and improvements made to the application.
+
+### Subfolders Description
+
+The root-level `assets/docs/` folder does not contain any subfolders by default.

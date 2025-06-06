@@ -1,0 +1,50 @@
+repository:
+  - '*'
+
+assets:
+  - assets/*
+
+build:
+  - .dockerignore
+  - package.json
+
+chore:
+  - .husky
+  - .markdownlintignore
+  - .prettierrc
+  - .vscode/*
+  - *.env
+
+docs:
+  - docs/*
+  - _dev_stuff/*
+  - _layouts/*
+  - README
+  - README.md
+  - CHANGELOG.md
+  - site.webmanifest
+
+src:
+  - src/*
+
+specs:
+  - spec/*
+
+template:
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - SECURITY.md
+  - LICENSE.md
+
+git/github:
+  - .github/*
+  - .gitconfig
+  - .gitattributes
+  - .gitignore
+
+issue-templates:
+  - .github/ISSUE_TEMPLATE/bug_report.md
+  - .github/ISSUE_TEMPLATE/feature_request.md
+  - .github/ISSUE_TEMPLATE/general_comment.md
+  - .github/ISSUE_TEMPLATE/misconduct_report.md
+  - .github/ISSUE_TEMPLATE/vulnerability_report.md

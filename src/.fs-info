@@ -1,0 +1,80 @@
+<!-- ./src/.fs-info -->
+# FS-INFO - Source Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, project-specific source documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `src/` folder is the root directory for the project's source code. It contains all implementation files, modules, components, and assets that make up the core functionality of the application. Organizing the source code within this folder helps maintain a clear separation between implementation and other project concerns such as tests, configuration, and documentation.
+
+By keeping the codebase well-structured within `src/`, the project ensures maintainability, scalability, and ease of navigation for contributors.
+
+## Folder's Role
+
+The `src/` folder plays a crucial role in:
+
+- Housing all application source code and modules
+- Organizing code by feature, domain, or technical layer
+- Providing a single entry point for the application's build process
+- Supporting maintainable and scalable code organization
+
+This folder is intended to be the primary resource for anyone seeking to develop, review, or extend the project's core functionality.
+
+## Typical Content
+
+Source files are typically written in JavaScript, TypeScript, or other relevant languages, and are organized to reflect the architecture and structure of the application. The folder may also contain subfolders for grouping related features, components, utilities, and assets.
+
+### Typical Tree Structure
+
+```text
+src/
+├── components/          # Reusable UI components
+│   ├── Button.tsx
+│   └── ...
+│
+├── modules/             # Feature modules or domains
+│   ├── user/
+│   └── ...
+│
+├── utils/               # Utility functions and helpers
+│   └── ...
+│
+├── assets/              # Static assets (images, styles, etc.)
+│   └── ...
+│
+├── index.ts             # Main entry point
+└── ...                  # Additional source files or folders
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `src/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the root folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the project.
+
+#### index.ts / index.js
+
+  The main entry point for the application, responsible for bootstrapping or exporting core functionality.
+
+#### \*.ts / \*.js / \*.tsx / \*.jsx
+
+  Implementation files containing the application's logic, components, and modules.
+
+### Subfolders Description
+
+#### components/
+
+Contains reusable UI components that can be shared across the application.
+
+#### modules/
+
+Contains feature-specific modules or domains, each encapsulating related functionality.
+
+#### utils/
+
+Holds utility functions, helpers, and shared logic used throughout the codebase.
+
+#### assets/
+
+Contains static assets such as images, fonts, and styles used by the application.

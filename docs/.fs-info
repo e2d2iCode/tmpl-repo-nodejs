@@ -1,0 +1,88 @@
+<!-- ./docs/.fs-info -->
+# FS-INFO - Documentation Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `docs/` folder is dedicated to the detailed documentation related to the project. It serves as a centralized location for guides, references, architectural overviews, and other materials that help users and contributors understand, use, and develop the project. As an example, in the case of a GitHub repository, `/docs/index.html` is typically the file that gets pointed to by [GitHub Pages](https://docs.github.com/pages).
+
+By maintaining comprehensive and well-organized documentation in this folder, the project ensures that both new and experienced contributors can quickly find the information they need, reducing onboarding time and improving collaboration.
+
+Despite the documentation having here its dedicated `diectory/`, it is usually consdered good practice to keep certain documentation files in Markdown format at the project's root, for vidibility and direct access. Those files usually are: `README.md`, `CHANGELOG.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `SECURITY.md`. It is not rare to find their contents also embedded in the `docs/` documentation.
+
+As an alternative to the description below, one may use [Jeckyll](https://jekyllrb.com/), which is compatible with [GitHub Pages (Jeckyll)](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+
+## Folder's Role
+
+The `docs/` folder plays a crucial role in:
+
+- Providing user and developer guides
+- Documenting project architecture and design decisions
+- Offering API references and usage examples
+- Storing changelogs, migration guides, and FAQs
+- Centralizing all written resources that support the project's development and usage
+
+This folder is intended to be the go-to resource for anyone seeking information about the project beyond the basic overview in the root `README.md`.
+
+## Typical Content
+
+The documentation is typically provided in the form of HTML files, and the `docs/` folder has the structure if a website with an `index.html` at its root as the site's entry point and subfolders holding stylesheets, assets and, of course, the documentation files per sé.
+
+### Typical Tree Structure
+
+```text
+docs/
+├── assets/             # Shared assets
+│   ├── icons/            # Shared icons
+│   ├── images/           # Shared images
+│   └── ...               # ...
+│
+├── styles/             # Documentation's common stlesheets
+│   ├── core.css          # Styles to be included everywhere
+│   ├── print.css         # Styles optimized for printed documents
+│   ├── screen.css        # Styles optimized for on-screen display
+│   └── ...               # ...
+│
+├── contents/           # Main documentation content
+│   ├── api/              # Api-specific documentation
+│   ├── dev-docs/         # Development-specific documentation
+│   ├── user-manual/      # User's manual
+│   ├── ...               # Additional subfolders or files...
+│   └── 404.html          # Error 404 page
+│
+├── index.html          # Documentation's entry point
+├── site.webmanifest    # Web Manifest file
+└── ...                 # ...
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the root directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the root folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the project.
+
+#### index.html
+
+  The main entry point for the documentation website. It typically provides an overview of the project and links to other documentation sections.
+
+#### site.webmanifest
+
+  A manifest file that defines how the documentation site appears when installed on a device or added to a home screen, including icons and theme colors.
+
+### Subfolders Description
+
+This section provides a quick explanation of each folder within the root directory. Detailed information is provided in their dedicated `.fs-info` files, if available.
+
+#### assets/
+
+Contains shared resources such as images, icons, and other media used throughout the documentation. Typical icons and images to be found here are logos and favicons.
+
+#### styles/**
+
+Holds CSS stylesheets thar are common to the whole documentation. Stylesheets that are specific to a certain documentation's area like, for instance, the user-manual, may be found within the area's dedicated `contents/`' subfolder.
+
+#### contents/
+
+Contains the main documentation content, typically organized into subfolders, each addressing a specific aspect of the documentation. Doing so not only helps in organizing the content logically, but also facilitate the maintenance of the documentation and provides developpers with a way to quick jump to a particular aspect by navigating directly through the hierarchy of the `docs/` folder.

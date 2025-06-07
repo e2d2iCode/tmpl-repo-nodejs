@@ -81,11 +81,11 @@ The step below finalizes the release's changelog. It should be the last commit o
 - Jest framework for testing: dependency + [`jest.config.js](jest.config.js)
 - Husky support: dependency + [.husky/](.husky/.fs-info) folder
 - Git Hooks using Husky:
+  - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
   - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit message conventions: dependency + [commitlint.config.js](commitlint.config.js)
   - [`pre-commit`](.husky/pre-commit): formats and lints the code before committing
-  - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
-  - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
   - [`post-merge`](.husky/pre-push): syncs dependencies after a merge
+  - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
 
 ### Changed
 

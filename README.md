@@ -73,28 +73,44 @@ git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
 ```
 
-### 2. Update/Customize Files
+**Note.** Your development environment must have [npm](https://www.npmjs.com/) and/or [yarn](https://yarnpkg.com/), and [NodeJS](https://nodejs.org/)
 
-The following files REQUIRE modifications to reflect your project:
+### 3. Configure/Customize The Template
 
-- [README](README.md): modify the current file's content to describe your own project.
+The exact procedure to configure/customize the template depends on the project's specifics. The following modifications, however, are required regardless of the project:
 
-- [LICENSE](LICENSE.md): by default, this template provides a copy of the [MIT License](https://opensource.org/licenses/MIT), which needs to be updated with the copyright's year and name. For a different Open Source License, refer to the [OpenSource.org's website](https://opensource.org/).
+- Replace the root-level [README](README.md) file by one describing your project.
 
-- [SECURITY](SECURITY.md): this file contains a link to your repository, which `<username>` and `<repository>` placeholders require to be replaced by your project's specific data.
+- Update/Chage the [LICENSE](LICENSE.md): by default, this template provides a copy of the *MIT*, which requires the `<<year>>` and `<<name>>` placeholders to be replaced by the copyright's year and name, respectively. For a different Open Source License or more information on the *MIT*, visit the [OpenSource.org's website](https://opensource.org/).
 
-- [CHANGELOG](CHANGELOG.md): this file contains a link to your repository, which `<username>` and `<repository>` placeholders require to be replaced by your project's specific data.
+- Replace the `<<user>>` and `<<repo>>` placeholders by your GitHub's *username* and the the name of *repository* hosting it. The files this replacement should affect are:
+  - The [SECURITY](SECURITY.md) policy at the project's root
+  - The [CHANGELOG](CHANGELOG.md) template at the project's root
+
+- In the [CHANGELOG](CHANGELOG.md) template at the project's root, further replace the `<<yyyy-mm-dd>>` placeholder to be found at the end of the `## [Seed] ...` headings by the current date in the specified format. Note that instructions on how to update that file are embedded in the file itself.
+
+- In [package.json](package.json), replace the `e2__project-<key>__e2` placeholders by values matching your project's information; there are 3 of them:
+  - `e2__project-name__2e` should be your project's name;
+  - `e2__project-descr__2e` should be a description of your project;
+  - `e2__project-author__2e` should be the name(s) of the project's author(s);
+  - `e2__project-license__2e` should be 'MIT' or the name the license you chose;
+  - `e2__project-keywords__2e` should be a list of keywords referencinge your project;
+
+### 4. Install Dependencies & Prepare
+
+Install the required dependencies using your preferred package manager:
+
+**Using `npm`**
 
 ```sh
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+npm install
 ```
 
-### 4. Set up platform-specific requirements
+**Using `yarn`**
 
-- Create configuration files (e.g., `package.json`, `pyproject.toml`, etc.).
-- Update `.env.required` and `.env` and fill in required environment variables.
-- Follow any additional setup steps according to your project's type
+```sh
+yarn install
+```
 
 ## Features
 
@@ -107,6 +123,79 @@ This template comes packed with essential features to streamline development and
 
 In addition to the above, this template provides a set of pre-configured repository files and folder metadata to help you maintain best practices and ensure clarity throughout your project structure. Details about these are provided in the subsections below.
 
+### NodeJS-Specifc Features
+
+This template is tailored for NodeJS development and includes several NodeJS-specific enhancements. The next sections describe these enhancements in detail, outlining how they support efficient and modern NodeJS project workflows.
+
+#### Pre-configured `package.json`
+
+The [``package.json`](package.json) comes with sensible defaults for scripts, dependencies, and metadata fields. Placeholders are provided for project name, description, author, license, and keywords, making it easy to customize for your project.
+
+It also provides the following scripts, which can be easily extended or customized
+
+- **`start`**: Runs the main application in production mode.
+- **`dev`**: Starts the application in development mode with hot-reloading (if configured).
+- **`test`**: Executes the project's test suite.
+- **`lint`**: Checks the code for linting errors using ESLint.
+- **`format`**: Formats the codebase using Prettier or the configured formatter.
+- **`prepare`**: Runs tasks needed before publishing or installing dependencies (e.g., Husky hooks setup). That command is run automatically after `npm install` or `yarn install` is invoked.
+
+#### NodeJS-friendly `.gitignore`**
+
+  Pre-configured to ignore `node_modules`, log files, build outputs, and environment files, reducing accidental commits of unwanted files.
+
+#### ESLint Support
+
+The template includes a pre-configured ESLint setup for consistent code quality and style enforcement. It comes with recommended rules for NodeJS, including support for modern JavaScript features and best practices. The configuration is located in `.eslintrc` or `.eslintrc.json` and can be extended to include plugins (such as `eslint-plugin-node`, `eslint-plugin-import`, `eslint-config-prettier`, etc.) or custom rules as needed. ESLint is integrated with most editors for real-time feedback and can be run manually via `npm run lint` or automatically as a pre-commit hook (via Husky). The setup supports linting for both JavaScript and TypeScript if needed, and can be further customized for your project's coding standards.
+
+#### Prettier Support
+
+Prettier is integrated for automatic code formatting, ensuring a consistent code style across the project. The configuration is provided in `.prettierrc`, `.prettierrc.json`, or within `package.json` under the `prettier` key, and can be customized to match your team's preferences (e.g., tab width, semicolons, single/double quotes, trailing commas). Prettier works alongside ESLint (with `eslint-config-prettier` to avoid conflicts) and can be run via `npm run format` or as part of the pre-commit workflow to enforce formatting before code is committed. Editor plugins are available for on-save formatting, and Prettier can be extended with ignore files (`.prettierignore`) to exclude files or folders from formatting.
+
+#### Jest Support
+
+Jest is set up as the default testing framework, providing a robust environment for writing and running unit and integration tests. Example configuration and scripts are included.
+
+The `__tests__/` folder is dedicated to end-to-end (E2E) tests. All E2E test suites, utilities, and configuration files should be placed here. Unit tests should be located alongside the code they test within the `/src` directory. This separation helps maintain clarity between unit and E2E testing, making it easier to organize and maintain your test code.
+
+#### Git Hooks Support
+
+Git hooks are managed via Husky, enabling automated checks (such as linting and testing) before commits and pushes. This helps maintain code quality and prevent errors from reaching the remote repository.
+
+Each hook is configured in the `.husky/` directory and can be customized to fit your project's workflow.
+
+##### The `pre-push` Hook
+
+The [`pre-push`](.husky/pre-push) hook runs the project's entire test suite before allowing a push to a remote repository.
+This ensures that only code passing all tests can be pushed, helping prevent broken or failing code from reaching shared branches.
+
+##### The `commit-msg`
+
+The [`commit-msg`](.husky/commit-msg) hook uses [commitlint](https://commitlint.js.org/) to enforce commit message conventions. If a commit message does not follow the required format (as configured in [`commitlint.config.js`](commitlint.config.js)), the commit will be rejected. This helps maintain a consistent and meaningful commit history.
+
+##### The `pre-commit`
+
+The [`pre-commit`](.husky/pre-commit) hook runs code formatting (e.g., Prettier) and linting (e.g., ESLint) on staged files before a commit is finalized. If any formatting or linting errors are found, the commit is aborted. This ensures that only well-formatted and lint-free code is committed to the repository.
+
+##### The `post-merge`
+
+The [`post-merge`](.husky/post-merge) hook automatically runs dependency installation (e.g., `npm install` or `yarn install`) after a successful merge. This ensures that your local dependencies are always up to date with the latest changes from merged branches, reducing the risk of missing or outdated packages.
+
+##### The `post-checkout`
+
+The [`post-checkout`](.husky/post-checkout) hook automatically runs dependency installation after switching branches or checking out a commit. This keeps your working directory's dependencies in sync with the checked-out code, preventing runtime errors due to missing or mismatched packages.
+
+### Folder Metadata with `.fs-info` Files
+
+Every conceptual folder in the template contains a `.fs-info` file at its root.
+These files describe the typical role and content of the folder, providing:
+
+- An overview of the folder's purpose (agnostic to any specific project or language)
+- A summary of typical files and subfolders
+- Guidance for maintainers and contributors on how to use or extend the folder
+
+This approach ensures clarity, consistency, and easier onboarding for new contributors.
+
 ### Pre-configured Standard Repository Files
 
 This template includes a set of standard repository files to help you maintain best practices and project hygiene from the start.
@@ -116,30 +205,19 @@ This template includes a set of standard repository files to help you maintain b
 #### Root Level Files
 
 - [**`README.md`**](README.md): Project overview, installation, usage, and contribution guidelines.
-  _Update to reflect your project's purpose, setup, and usage instructions._
 - [**`LICENSE.md`**](LICENSE): Default is MIT.
-  _Replace or update if your project uses a different license._
 - [**`CODE_OF_CONDUCT.md`**](CODE_OF_CONDUCT.md): Community standards and expected behavior.
-  _Update contact information or enforcement details as needed._
 - [**`CONTRIBUTING.md`**](CONTRIBUTING.md): Guidelines for contributing to the project.
-  _Customize to match your workflow and requirements._
 - [**`SECURITY.md`**](SECURITY.md): Security policy and vulnerability reporting process.
-  _Update reporting instructions and supported versions._
 - [**`CHANGELOG.md`**](CHANGELOG.md): Track changes, releases, and updates.
-  _Continue to update as your project evolves._
 - [**`.env.required`**](.env.required): Template for required environment variables.
   _Update to list all environment variables your project needs. THIS FILE GETS COMMITTED._
 - [**`.env`**](.env): Actual environment variable values for local development.
-  _Should not be committed to version control; add to `.gitignore`. THIS FILE IS EXCLUDED FROM BEING COMMITTED (see [`.gitignore`](.gitignore))_
 - [**`.env.example`**](.env.example): A template for required environment variables.
-  _Should not be committed to version control; add to `.gitignore`._
-
 - [**`.gitattributes`**](.gitattributes): Defines file handling attributes for Git, such as line endings normalization, diff settings, and linguist overrides. Helps maintain cross-platform consistency and proper file treatment in the repository.
 - [**`.gitconfig`**](.gitconfig): Repository-specific Git configuration, such as preferred merge/diff tools and commit templates. Allows customizing Git behavior for this project.
 - [**`.gitignore`**](.gitignore): Specifies intentionally untracked files to ignore, such as dependencies, build outputs, environment files, and OS/IDE artifacts. Keeps the repository clean and focused on source files.
 - [**`.fs-info`**](.fs-info): Describes the purpose and typical contents of the project root folder. Each major folder in the template includes a `.fs-info` file to document its intended role and usage.
-
-  _Update checklist and sections as needed._
 
 #### Standard Repository Folders
 
@@ -255,17 +333,6 @@ Holds Markdown templates for different types of GitHub issues (e.g., bug reports
 ###### `.github/copilot/`
 
 Includes configuration and instruction files for GitHub Copilot, such as custom Copilot instructions to guide AI code suggestions. These files help ensure that Copilot-generated code aligns with your project's conventions and requirements.
-
-### Folder Metadata with `.fs-info` Files
-
-Every conceptual folder in the template contains a `.fs-info` file at its root.
-These files describe the typical role and content of the folder, providing:
-
-- An overview of the folder's purpose (agnostic to any specific project or language)
-- A summary of typical files and subfolders
-- Guidance for maintainers and contributors on how to use or extend the folder
-
-This approach ensures clarity, consistency, and easier onboarding for new contributors.
 
 ## Contributing
 

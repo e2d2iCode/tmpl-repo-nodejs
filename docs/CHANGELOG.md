@@ -1,22 +1,20 @@
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD033 -->
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
 
-!!!Hint Conventions
-    This document's format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-    and [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
+!!!Hint Conventions This document's format is based on
+[Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
+[Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
 
-<!--
---------------------------------------------------------------------------------
-___  TEMPLATE     ______________________________________________________________
---------------------------------------------------------------------------------
+<!-- SECTIONS' TEMPLATES ---
 
-SECTIONS
-´´´´´´´´´´
 ## [Unreleased](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/...HEAD)
+
 ## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
+
 ## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
 
 ### Added
@@ -43,22 +41,20 @@ SECTIONS
 
 - ...
 
------------------------------------------------------------------------------
+-->
+<!-- MILESTONES' TEMPLATE  ---
 
-MILESTONES
-´´´´´´´´´
-
-**[d<X.Y>-<label>-<Z>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/d<X.Y>-<label>-<N>...<base-tag>**
+**[d<X.Y>-<label>-<Z>](<https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/d><X.Y>-<label>-<N>...<base-tag>**
 
 -->
-<!--
---------------------------------------------------------------------------------
-___ CHANGELOG   ________________________________________________________________
---------------------------------------------------------------------------------
+<!-- NEW VERSION CHECKLIST (!!! Release Branch !!!)  ---
 
-NEW  VERSION  CHECKLIST  (!!! Release Branch !!!)
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
-The first 3 steps below should be taken eright on the `develop` branch, right before  the `telease` branch is created. If done on the `release` branch, then the changes should be merged back to the `develop` branch asap (before  its changelog is updated with new entries, otherwise tconflicts will occur when the `release` branch is merged back to the `develop` branch).
+The first 3 steps below should
+be taken eright on the `develop` branch, right before the `telease` branch is
+created. If done on the `release` branch, then the changes should be merged back
+to the `develop` branch asap (before its changelog is updated with new entries,
+otherwise tconflicts will occur when the `release` branch is merged back to the
+`develop` branch).
 
     [   ]  REPLACE [Unreleased] by the last release's next version
 
@@ -66,25 +62,75 @@ The first 3 steps below should be taken eright on the `develop` branch, right be
 
     [   ]  REPLACE [Unreleased] by the last release's next version
 
-The step below finalizes the release's changelog. It should be the last commit on the `release` branch before the final merge happens.
+The step below finalizes the release's changelog. It should be the last commit
+on the `release` branch before the final merge happens.
 
     [   ]  MODIFY the comparison settings from `...HEAD` to `<to-that>...<this>`
+
 -->
+
+## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.0...v1.0.1) &nbsp;-&nbsp; 2025-06-07
+
+### Added
+
+- Centralized configuration files in a new `.configs/` folder:
+  - `.eslintrc.json`, `.prettierrc`, `.markdownlint.json`, `jest.config.js`,
+    `commitlint.config.js`, `.editorconfig`, `.watchmanconfig`
+- VS Code workspace settings to reference configs in `.configs/`
+- Markdownlint configuration and documentation references
+- `.gitattributes` and VS Code settings to treat `.fs-info` files as Markdown
+- Added and documented `.fs-info` files for conceptual folders
+- Added `eslint-plugin-markdown` as a devDependency for Markdown linting support
+
+### Changed
+
+- Updated all scripts in `package.json` to use config files from `.configs/`
+- Updated documentation and `.fs-info` files to reflect new config file
+  locations
+- Updated VS Code `.vscode/settings.json` for Prettier, ESLint, and Markdownlint
+  config paths and file associations
+- Improved `README` to document new config structure and Markdownlint support
+- Updated `.prettierrc` to remove unsupported options and keep only Prettier
+  settings
+- Updated `.markdownlint.json` to enforce asterisk for emphasis (`MD049`) and
+  disable line-length (`MD013`)
+- Updated Husky hooks and commitlint config to use `.configs/` location
+
+### Removed
+
+- Removed references to config files from the project root (now in `.configs/`)
+- Removed the `github/labeller.yml` action
+
+### Fixed
+
+- Fixed Prettier, ESLint, and Markdownlint integration to work with centralized
+  configs
+- Fixed documentation and changelog links to configuration files
+- Fixed YAML syntax in `.github/labeler.yml` (quoted glob patterns)
+- Fixed missing dependencies for ESLint plugins (e.g., `eslint-plugin-markdown`)
+- Fixed Husky pre-commit and commit-msg hooks to avoid message/content
+  transformation
 
 ## [v1.0.0](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1...v1.0.0) &nbsp;-&nbsp; 2025-06-07
 
 ### Added
 
-- A generic [`package.json`](package.json) file with e2__placeholders__2e
-- EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint Extension
-- Prettier: dependency + [`.prettierrc`](.prettierrc) + [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
+- A generic [`package.json`](package.json) file with e2**placeholders**2e
+- EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint
+  Extension
+- Prettier: dependency + [`.prettierrc`](.prettierrc) +
+  [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
 - postcss dependency for transforming CSS with JavaScript plugins
-- Jest framework for testing: dependency + [`jest.config.js](jest.config.js) + jest-environment-jsdom dependency
+- Jest framework for testing: dependency + [`jest.config.js](jest.config.js) +
+  jest-environment-jsdom dependency
 - Husky support: dependency + [.husky/](.husky/.fs-info) folder
 - Git Hooks using Husky:
   - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
-  - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit message conventions: dependency + [commitlint.config.js](commitlint.config.js)
-  - [`pre-commit`](.husky/pre-commit): formats and lints the code before committing
+  - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit
+    message conventions: dependency +
+    [commitlint.config.js](commitlint.config.js)
+  - [`pre-commit`](.husky/pre-commit): formats and lints the code before
+    committing
   - [`post-merge`](.husky/pre-push): syncs dependencies after a merge
   - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
 
@@ -93,27 +139,16 @@ The step below finalizes the release's changelog. It should be the last commit o
 - Update [`README`](README.md) with NodeJs-Specific features
 - Update [`.watchmanconfig`](.watchmanconfig) to ignore `node_modules/` folder
 
-### Deprecated
-
-- ...
-
-### Removed
-
-- ...
-
 ### Fixed
 
 - Set placeholders to the `CHANGELOG` template (root-level)
-
-### Security
-
-- ...
 
 ---
 
 ## [Seed](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1) &nbsp;-&nbsp; 2025-06-07
 
-Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github), which provides:
+Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github),
+which provides:
 
 ### Added
 
@@ -125,13 +160,20 @@ Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github), w
 - Changelog tracking: [`/CHANGELOG.md`](CHANGELOG.md)
 - Editor's configuration': [`.vscode/`](.vscode/.fs-info)
 - Watchman configuration: [`.watchmanconfig`](.watchmanconfig)
-- Git configuration: [`/.gitattributes`](.gitattributes), [`/.gitconfig`](.gitconfig)
-- Template for local environment variables: [`/.env`](.env) - should not be committed.
-- Template for required environment variables: [`/.env.required`](.env.required) - should be committed
-- Policies: [`/CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md), [`/CONTRIBUTING.md`](CONTRIBUTING.md), [`/SECURITY.md`](SECURITY.md)
-- Folder structure: [`/assets/`](assets/.fs-info), [`/docs/`](docs/.fs-info), [`/scripts/`](scripts/.fs-info), [`/src/`](src/.fs-info), [`/tests/`](tests/.fs-info), [`.github/`](.github/.fs-info)
+- Git configuration: [`/.gitattributes`](.gitattributes),
+  [`/.gitconfig`](.gitconfig)
+- Template for local environment variables: [`/.env`](.env) - should not be
+  committed.
+- Template for required environment variables:
+  [`/.env.required`](.env.required) - should be committed
+- Policies: [`/CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md),
+  [`/CONTRIBUTING.md`](CONTRIBUTING.md), [`/SECURITY.md`](SECURITY.md)
+- Folder structure: [`/assets/`](assets/.fs-info), [`/docs/`](docs/.fs-info),
+  [`/scripts/`](scripts/.fs-info), [`/src/`](src/.fs-info),
+  [`/tests/`](tests/.fs-info), [`.github/`](.github/.fs-info)
 - GitHub-specific features, including:
-  - [Labeller](.github/labeler.yml) and [greetings](.github/greetings.yml) actions,
+  - [Labeller](.github/labeler.yml) and [greetings](.github/greetings.yml)
+    actions,
   - [Greetings](.github/greetings.yml) actions,
   - [Issue templates](.github/ISSUE_TEMPLATE/.fs-info),
   - [GitHub Workflows](.github/workflows/.fs-info),

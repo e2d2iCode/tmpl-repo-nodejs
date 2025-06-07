@@ -1,5 +1,6 @@
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD033 -->
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
@@ -7,6 +8,7 @@ All notable changes to this project will be documented in this file.
 !!!Hint Conventions This document's format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
 [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
+
 <!-- SECTIONS' TEMPLATES ---
 
 ## [Unreleased](https://github.com/<<user>>/<<repo>>/compare/...HEAD)
@@ -133,8 +135,9 @@ which provides:
   [`/CONTRIBUTING.md`](CONTRIBUTING.md), [`/SECURITY.md`](SECURITY.md)
 - Folder structure: [`/assets/`](assets/.fs-info), [`/docs/`](docs/.fs-info),
   [`/scripts/`](scripts/.fs-info), [`/src/`](src/.fs-info),
+  [`/tests/`](tests/.fs-info), [`.github/`](.github/.fs-info) (docs/.fs-info),
+  [`/scripts/`](scripts/.fs-info), [`/src/`](src/.fs-info),
   [`/tests/`](tests/.fs-info), [`.github/`](.github/.fs-info)
-(docs/.fs-info), [`/scripts/`](scripts/.fs-info), [`/src/`](src/.fs-info), [`/tests/`](tests/.fs-info), [`.github/`](.github/.fs-info)
 - GitHub-specific features, including:
   - [Greetings](.github/greetings.yml) actions,
   - [Issue templates](.github/ISSUE_TEMPLATE/.fs-info),
@@ -142,4 +145,5 @@ which provides:
   - [Greetings action](.github/gretteings.yml),
   - [Dependabot configuration](.github/dependabot.yml),
   - [Copilot instructions and prompts](.github/copilot/.fs-info)
-  - [Labeller](.github/labeler.yml) and [greetings](.github/greetings.yml) actions,
+  - [Labeller](.github/labeler.yml) and [greetings](.github/greetings.yml)
+    actions,

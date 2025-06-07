@@ -1,0 +1,8 @@
+{
+  "prettier.configPath": ".configs/.prettierrc",
+  "markdownlint.configFile": ".configs/.markdownlint.json",
+  "eslint.ignoreUntitled": true,
+  "eslint.workingDirectories": [
+    { "mode": "auto" }
+  ]
+}

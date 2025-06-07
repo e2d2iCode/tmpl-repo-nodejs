@@ -17,8 +17,7 @@
   ],
   "author": "e2__project-author__2e",
   "license": "e2__project-license__2e",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.0.0",
     "jest": "^29.0.0",

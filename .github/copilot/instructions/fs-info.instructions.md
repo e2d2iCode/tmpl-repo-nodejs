@@ -17,10 +17,11 @@ In the next subsection below is the template to follow for `.fs-info` files. It 
 ### Template to follow
 
 <!-- << path-to-folder >>.fs-info -->
+
 # FS-INFO - << A Short Title, e.g. Styling Documentation Folder >>
 
 !!!Note
-    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`
+This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`
 
 ## Overview
 

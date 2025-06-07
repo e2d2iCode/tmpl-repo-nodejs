@@ -16,10 +16,10 @@ In the next Section below is the template to follow for `README.dev.md` files. I
 
 - Useful information MAY be found in the `README.md` file, but the current description MUST be adapted to the development context, focusing on implementation details, development practices, and technical aspects relevant to developers.
 
-
 ### The `README.dev.md` File Template
 
 <!-- << path-to-file >> -->
+
 # README - << Name of the tool at hand >>
 
 (( Here, INSERT A brief description of the tool at hand, its purpose, and key features. ))

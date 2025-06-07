@@ -13,7 +13,7 @@ chore:
   - .markdownlintignore
   - .prettierrc
   - .vscode/*
-  - *.env
+  - '*.env'
 
 docs:
   - docs/*

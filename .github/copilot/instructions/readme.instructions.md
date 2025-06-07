@@ -4,7 +4,6 @@ The following instructions are designed to ensure that `README.md` files are cre
 
 These instructions apply in addition to the general markdown formatting rules specified in `.github/copilot/instructions/markdown.instructions.md`.
 
-
 ## General Instructions
 
 In the next section below is the template to follow for `README.md` files. It provides a structured format that MUST be adhered to when creating these files.
@@ -16,6 +15,7 @@ In the next section below is the template to follow for `README.md` files. It pr
 ## The `README.md` File Template
 
 <!-- << path-to-file >> -->
+
 # README - << Name of the tool at hand >>
 
 (( Here, INSERT A concis description of the tool at hand, its purpose, and key features. ))
@@ -38,7 +38,7 @@ In the next section below is the template to follow for `README.md` files. It pr
 
 ## Features
 
-(( Here, INSERT a list the key features of the tool at hand with a concise description. Then, provide a detailed description of each features in its own subsection. Further subdivide each subsection into lower level subsections if necessary.  Illustrate each feature's usage with example(s) and code snippets. ))
+(( Here, INSERT a list the key features of the tool at hand with a concise description. Then, provide a detailed description of each features in its own subsection. Further subdivide each subsection into lower level subsections if necessary. Illustrate each feature's usage with example(s) and code snippets. ))
 
 ## Contributing
 

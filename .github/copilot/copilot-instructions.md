@@ -9,9 +9,10 @@ The following are special symbols used to wrap placeholders and comments in Copi
 - ( ... ) contains a note or comment for Copilot (to be removed when used)
 - <a> | <b> | <c> | ... indicates a list of items or options
 
-When used in a context where a placeholder may conflict with other syntax or conventions, the wrapping symbols will be doubled, e.g. within a Markdown template or file, << ... >>, [[ ... ]], and (( ... )) will be used instead of < ... >, [ ... ], or ( ... ), respectively.
+When used in a context where a placeholder may conflict with other syntax or conventions, the wrapping symbols will be doubled, e.g. within a Markdown template or file, << ... >>, [[...]], and (( ... )) will be used instead of < ... >, [ ... ], or ( ... ), respectively.
 
 ### Dedicated Placeholders
+
 - `<< path-to-file >>` indicates the relative path to the current file from the project root, using forward slashes (`/`) as directory separators.
 - `<< path-to-folder >>` indicates the relative path to the folder from the project root, using forward slashes (`/`) as directory separators.
 
@@ -52,12 +53,14 @@ The syntax for storing [whateve] information is as follows:
 **LET** | **SAVE** | **VERSION** [<info>] as <label>
 
 where:
+
 - **LET** indicates that <label> MUST be an up-to-date reference to the value of `<whatever>`
 - **SAVE** indicates that <label> MUST be a snapshot of the value of [<info>] at the time of the request
 - **VERSION** indicates that <label> MUST be a versioned snapshot of the value of [<info>]; Copilot MUST automatically increment and append the version number to <label> as 2-digits integers, using `~` as a separator; it MUST confirm the versioned identifier in its answer, e.g. `SAVED [<info>] as <label>~01`, `SAVED [<info>] as <label>~02`, etc.
 
 When clear from the context, [<info>] can be omitted, and the identifier can be used directly. As a general rule:
-- When editing a file,  [<info>] is usually the file itself;
+
+- When editing a file, [<info>] is usually the file itself;
 - When chatting, [<info>] is usually the last message I sent;
 
 Copilot MUST ask for clarification if the context is not clear enough to determine what [<info>] refers to.

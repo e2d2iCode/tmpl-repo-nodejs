@@ -6,7 +6,7 @@ labels: comment, question
 assignees: ''
 ---
 
-This form is for you to make a comment or ask a general question about the project. To report a *bug*, *vulnerability* or any comunity member's *misconduct*, as well a to *request a feature*, please use the corresponding dedicated form.
+This form is for you to make a comment or ask a general question about the project. To report a _bug_, _vulnerability_ or any comunity member's _misconduct_, as well a to _request a feature_, please use the corresponding dedicated form.
 
 **Contact information (optional)**
 If you are comfortable, provide your contact information so community leaders can follow up with you:
@@ -18,7 +18,7 @@ If you are comfortable, provide your contact information so community leaders ca
 [] Documentation
 [] Implementation
 [] User Experience
-[] Other: *please specify*
+[] Other: _please specify_
 
 **Leave your comment below**
-*I love your app, so I'm willing to donate a million USD. How can I proceed.*
+_I love your app, so I'm willing to donate a million USD. How can I proceed._

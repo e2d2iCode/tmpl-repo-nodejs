@@ -25,6 +25,7 @@ Upon every change to the structure of the document, Copilot MUST perform a docum
 - Do not use explicit `---` separators between sections
 
 - Add a blank line before and after:
+
   - Each heading (except the first one in the document that should not have a blank line before it)
   - Each list (but not between list items, neither before sub-lists)
   - Each code block
@@ -59,12 +60,10 @@ src/
 
 - Ensure subfolders are listed before files, and sort them by name length (shortest to longest).
 
-
 ## Clarity and Consistency
 
 - Ensure the document is consistent and easy to read
 - Avoid redundancies
-
 
 ## Chat Specific Instructions
 
@@ -80,7 +79,7 @@ The following rules apply only when Copilot is asked to provide the document's c
 - Example:
   Instead of:
   ```tsx
-  const example = "code";
+  const example = 'code';
   ```
   Use:
   &&&tsx

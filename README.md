@@ -1,4 +1,5 @@
 <!-- README.md -->
+
 # README - GitHub Template for NodeJS Projects
 
 ## Table of Contents
@@ -93,9 +94,10 @@ The exact procedure to configure/customize the template depends on the project's
 
 - Replace the root-level [README](README.md) file by one describing your project.
 
-- Update/Chage the [LICENSE](LICENSE.md): by default, this template provides a copy of the *MIT*, which requires the `<<year>>` and `<<name>>` placeholders to be replaced by the copyright's year and name, respectively. For a different Open Source License or more information on the *MIT*, visit the [OpenSource.org's website](https://opensource.org/).
+- Update/Chage the [LICENSE](LICENSE.md): by default, this template provides a copy of the _MIT_, which requires the `<<year>>` and `<<name>>` placeholders to be replaced by the copyright's year and name, respectively. For a different Open Source License or more information on the _MIT_, visit the [OpenSource.org's website](https://opensource.org/).
 
-- Replace the `<<user>>` and `<<repo>>` placeholders by your GitHub's *username* and the the name of *repository* hosting it. The files this replacement should affect are:
+- Replace the `<<user>>` and `<<repo>>` placeholders by your GitHub's _username_ and the the name of _repository_ hosting it. The files this replacement should affect are:
+
   - The [SECURITY](SECURITY.md) policy at the project's root
   - The [CHANGELOG](CHANGELOG.md) template at the project's root
 
@@ -152,9 +154,9 @@ It also provides the following scripts, which can be easily extended or customiz
 - **`format`**: Formats the codebase using Prettier or the configured formatter.
 - **`prepare`**: Runs tasks needed before publishing or installing dependencies (e.g., Husky hooks setup). That command is run automatically after `npm install` or `yarn install` is invoked.
 
-#### NodeJS-friendly `.gitignore`**
+#### NodeJS-friendly `.gitignore`\*\*
 
-  Pre-configured to ignore `node_modules`, log files, build outputs, and environment files, reducing accidental commits of unwanted files.
+Pre-configured to ignore `node_modules`, log files, build outputs, and environment files, reducing accidental commits of unwanted files.
 
 #### ESLint Support
 

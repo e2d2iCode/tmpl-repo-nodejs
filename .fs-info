@@ -1,29 +1,23 @@
 <!-- ./.fs-info -->
 # FS-INFO - Project Root Folder
 
-<!-- Project overview and purpose -->
-# Project Root Folder Information
-
 !!!Note
     This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
 
 ## Overview
 
-<!-- Explains the purpose of the root folder -->
 The root folder is the top-level directory of the project. It is structured to provide a clear and organized layout, making it easy for developers to navigate and understand the project's structure. This folder includes configuration files, documentation, and subdirectories that house the source code, tests, and other resources.
 
 By following established conventions, the root folder ensures that the project remains maintainable and accessible to both new and experienced developers. Each file and subfolder within the root directory serves a specific purpose, contributing to the overall functionality and organization of the project.
 
 ## Folder's Role
 
-<!-- Describes the importance of the root folder -->
 The root folder plays a crucial role in organizing and centralizing all the essential components of the project. It serves as the foundation for the application's development, configuration, and deployment. By consolidating these resources in one location, the folder enhances collaboration, reduces onboarding time for new contributors, and ensures consistency in development practices.
 
 Additionally, this folder fosters a culture of transparency and efficiency within the project. By maintaining a well-structured and organized layout, it empowers contributors to make informed decisions, troubleshoot issues effectively, and align their efforts with the project's objectives. This centralized approach minimizes miscommunication and ensures that all contributors, regardless of their experience level, have access to the same foundational resources.
 
 ## Folder's Typical Content
 
-<!-- Lists the typical files and folders in the root directory -->
 The root folder contains a mix of files and subfolders, each serving a distinct role in the project's lifecycle. Below is the current structure of the root folder:
 
 ### Folder's Typical Tree Structure
@@ -63,12 +57,15 @@ Environment variable definitions for local development.
 This file typically contains sensitive or machine-specific configuration values (such as API keys, database URLs, or secret tokens) that are loaded at runtime. It is usually excluded from version control to protect sensitive data.
 
 **Example content:**
-```
+
+```plaintext
 DATABASE_URL=postgres://user:password@localhost:5432/dbname
 API_KEY=your-api-key-here
 SECRET_TOKEN=your-secret-token
 ```
+
 **Best practices:**
+
 - Never commit this file to version control.
 - Use `.env.example` or `.env.required` to document required variables.
 
@@ -78,13 +75,16 @@ Lists required environment variables for the project.
 This file documents all environment variables that must be set for the application to run correctly, serving as a checklist for developers and deployment environments.
 
 **Example content:**
-```
+
+```plaintext
 # Required environment variables
 DATABASE_URL=
 API_KEY=
 SECRET_TOKEN=
 ```
+
 **Usage:**
+
 - Developers should copy this file to `.env` and fill in the values.
 - CI/CD pipelines can validate that all required variables are set.
 
@@ -94,12 +94,15 @@ This file is used to define path-specific settings and behaviors in Git.
 It ensures consistent handling of files across different environments and contributors, such as line endings, diff settings, and merge strategies for specific file types.
 
 **Example content:**
-```
+
+```plaintext
 *.js text eol=lf
 *.sh text eol=lf
 *.md diff=markdown
 ```
+
 **Usage:**
+
 - Prevents issues with line endings across OSes.
 - Improves merge and diff behavior for certain file types.
 
@@ -109,7 +112,8 @@ A user-specific configuration file for Git that defines settings such as the use
 It can also include project-specific Git behaviors and overrides.
 
 **Example content:**
-```
+
+```plaintext
 [user]
     name = Your Name
     email = your.email@example.com
@@ -119,7 +123,9 @@ It can also include project-specific Git behaviors and overrides.
     co = checkout
     br = branch
 ```
+
 **Usage:**
+
 - Can be used to enforce project-specific Git settings.
 - Typically, user-level `.gitconfig` is in the home directory, but a project-level file can override settings.
 
@@ -129,13 +135,16 @@ Specifies files and directories that Git should ignore, such as build artifacts,
 Helps keep the repository clean by preventing accidental commits of files that do not belong in version control.
 
 **Example content:**
-```
+
+```plaintext
 node_modules/
 dist/
 .env
 *.log
 ```
+
 **Usage:**
+
 - Add patterns for files/folders that should not be tracked by Git.
 
 #### .watchmanconfig
@@ -144,12 +153,15 @@ A configuration file for Watchman, used to optimize development workflows by mon
 It can be used to ignore certain files or directories and to fine-tune file watching behavior for performance.
 
 **Example content:**
-```
+
+```plaintext
 {
   "ignore_dirs": ["node_modules", "dist"]
 }
 ```
+
 **Usage:**
+
 - Improves performance of file watchers in large projects.
 
 #### CHANGELOG.md
@@ -158,7 +170,8 @@ A markdown file documenting the project's history of changes, listing versions, 
 It provides a chronological record for users and contributors to track the evolution of the project.
 
 **Example structure:**
-```
+
+```plaintext
 ## [1.0.1] - 2024-06-01
 ### Fixed
 - Fixed bug in authentication module.
@@ -167,14 +180,17 @@ It provides a chronological record for users and contributors to track the evolu
 ### Added
 - Initial release.
 ```
+
 **Usage:**
+
 - Update this file with each release to communicate changes to users and contributors.
 
 #### CODE_OF_CONDUCT.md
 
-A document outlining expected behavior for contributors, fostering a positive and collaborative community.
-It sets standards for communication and helps maintain a welcoming environment.
+A document outlining expected behavior for contributors, fostering a positive and collaborative community. It sets standards for communication and helps maintain a welcoming environment.
+
 This file typically includes:
+
 - Guidelines for respectful and inclusive communication.
 - Procedures for reporting unacceptable behavior.
 - Consequences for violations.
@@ -182,9 +198,10 @@ This file typically includes:
 
 #### CONTRIBUTING.md
 
-A guide for contributors explaining how to get involved in the project, including instructions for setting up the development environment.
-It may also describe coding standards, pull request processes, and how to report issues.
+A guide for contributors explaining how to get involved in the project, including instructions for setting up the development environment. It may also describe coding standards, pull request processes, and how to report issues.
+
 This file usually covers:
+
 - Steps for setting up the project locally.
 - Branching and commit message conventions.
 - How to submit bug reports and feature requests.
@@ -192,18 +209,20 @@ This file usually covers:
 
 #### LICENSE.md
 
-A markdown file specifying the licensing terms for the project.
-It defines how the project's code can be used, modified, and distributed by others.
+A markdown file specifying the licensing terms for the project. It defines how the project's code can be used, modified, and distributed by others.
+
 Typical contents include:
+
 - The full text of the chosen open-source license (e.g., MIT, Apache 2.0, GPL).
 - Copyright and attribution requirements.
 - Any project-specific licensing exceptions or clarifications.
 
 #### README.md
 
-The primary documentation file for the project, including an overview, installation instructions, and usage examples.
-It is often the first point of reference for new users and contributors.
+The primary documentation file for the project, including an overview, installation instructions, and usage examples. It is often the first point of reference for new users and contributors.
+
 A comprehensive README usually contains:
+
 - Project description and purpose.
 - Installation and setup instructions.
 - Usage examples and common commands.
@@ -212,9 +231,10 @@ A comprehensive README usually contains:
 
 #### SECURITY.md
 
-A document outlining the project's security policies, including how to report vulnerabilities.
-It provides guidelines for responsible disclosure and describes the process for handling security issues.
+A document outlining the project's security policies, including how to report vulnerabilities. It provides guidelines for responsible disclosure and describes the process for handling security issues.
+
 This file often includes:
+
 - Steps for reporting security vulnerabilities.
 - Expected response times.
 - Security update and patching policies.
@@ -229,25 +249,29 @@ This section provides a quick explanation of each folder within the root directo
 Contains configuration files and templates for GitHub project management, such as workflow definitions (`workflows/`), issue and pull request templates, funding configuration, and other GitHub-specific automation or settings.
 
 **Typical contents:**
+
 - `workflows/`: YAML files defining CI/CD pipelines (e.g., build, test, deploy).
 - `ISSUE_TEMPLATE/`: Templates for bug reports and feature requests.
 - `PULL_REQUEST_TEMPLATE.md`: Standardizes pull request submissions.
 - `FUNDING.yml`: Information for project sponsorship.
 
 **Best practices:**
+
 - Keep workflow files modular and reusable.
 - Update templates to reflect current contribution guidelines.
 
-#### __tests__/
+#### \_\_tests__/
 
 Holder for the automated tests, including unit, integration, and end-to-end tests. This folder typically mirrors the structure of the `src/` directory and may include test utilities and fixtures.
 
 **Typical contents:**
+
 - Test files (e.g., `*.test.js`, `*.spec.ts`).
 - Test utilities and mock data.
 - Subfolders matching `src/` structure for organization.
 
 **Best practices:**
+
 - Use descriptive names for test files.
 - Keep tests isolated and independent.
 
@@ -256,11 +280,13 @@ Holder for the automated tests, including unit, integration, and end-to-end test
 Contains images, fonts, icons, and other static resources used by the application or documentation. These files are not processed by the build system and are referenced directly.
 
 **Typical contents:**
+
 - Images (`.png`, `.jpg`, `.svg`).
 - Fonts (`.ttf`, `.woff`).
 - Icons and logos.
 
 **Best practices:**
+
 - Organize assets by type or feature.
 - Optimize images for web use.
 
@@ -269,11 +295,13 @@ Contains images, fonts, icons, and other static resources used by the applicatio
 Contains all the documentation related to the project, such as guides, API references, architecture diagrams, and additional `.md` files. This folder helps onboard new contributors and users.
 
 **Typical contents:**
+
 - Markdown guides and tutorials.
 - API documentation.
 - Architecture diagrams and flowcharts.
 
 **Best practices:**
+
 - Keep documentation up to date with code changes.
 - Use clear, concise language and visuals.
 
@@ -282,12 +310,14 @@ Contains all the documentation related to the project, such as guides, API refer
 Contains publicly accessible files that are served directly to the client, such as `index.html`, favicon, robots.txt, and static assets that do not require processing. This folder is often used in web projects.
 
 **Typical contents:**
+
 - `index.html`: Main HTML entry point.
 - `favicon.ico`: Site icon.
 - `robots.txt`: Search engine directives.
 - Static images and files.
 
 **Best practices:**
+
 - Only include files that must be publicly accessible.
 - Avoid placing sensitive data in this folder.
 
@@ -296,11 +326,13 @@ Contains publicly accessible files that are served directly to the client, such 
 Utility and automation scripts for development, build, deployment, or maintenance tasks. Scripts may be written in Bash, Node.js, Python, or other languages, and are intended to streamline repetitive or complex operations.
 
 **Typical contents:**
+
 - Shell scripts (`.sh`), Node.js scripts (`.js`), Python scripts (`.py`).
 - Build, test, and deployment automation.
 - Project setup and maintenance utilities.
 
 **Best practices:**
+
 - Document script usage and dependencies.
 - Use cross-platform tools where possible.
 
@@ -309,10 +341,12 @@ Utility and automation scripts for development, build, deployment, or maintenanc
 Contains the source code of the application, serving as the foundation for the application's functionality. This folder typically includes the main application logic, components, modules, and sometimes subfolders for features, services, and utilities.
 
 **Typical contents:**
+
 - Main application entry point (e.g., `index.js`, `main.ts`).
 - Components, modules, and services.
 - Utilities and helpers.
 
 **Best practices:**
+
 - Organize code by feature or domain.
 - Follow consistent naming and structure conventions.

@@ -1,27 +1,20 @@
 {
+  "root": true,
   "env": {
     "node": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true
   },
   "extends": ["eslint:recommended"],
-  "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "rules": {},
+  "plugins": ["markdown"],
   "overrides": [
     {
       "files": ["*.md", "*.fs-info"],
-      "processor": "markdown/markdown",
-      "plugins": ["markdown"],
-      "rules": {
-        "markdown/markdownlint": [
-          "error",
-          {
-            "MD013": false
-          }
-        ]
-      }
+      "processor": "markdown/markdown"
     }
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
 }

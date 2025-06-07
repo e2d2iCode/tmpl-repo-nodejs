@@ -100,7 +100,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ---
 
-## [Seed](https://github.com/<user>/<repo>/releases/tag/v0.0.1) &nbsp;-&nbsp; <yyyy-mm-dd>
+## [Seed](https://github.com/<user>/<repo>/releases/tag/v0.0.1) &nbsp;-&nbsp; <2025-06-07>
 
 Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github), which provides:
 

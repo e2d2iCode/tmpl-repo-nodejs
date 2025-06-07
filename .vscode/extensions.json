@@ -5,6 +5,7 @@
     "github.copilot",
     "github.copilot-chat",
     "eamodio.gitlens",
-    "xyz.local-history"
+    "xyz.local-history",
+    "dbaeumer.vscode-eslint"
   ]
 }

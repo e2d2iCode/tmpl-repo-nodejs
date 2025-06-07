@@ -76,6 +76,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 ### Added
 
 - A generic [`package.json`](package.json) file with e2__placeholders__2e
+- A EsLint support via [`.eslintrc.json`](.eslintrc.json) file & VSC's EsLint extension
 
 ### Changed
 

@@ -15,9 +15,9 @@ ___  TEMPLATE     ______________________________________________________________
 
 SECTIONS
 ´´´´´´´´´´
-## [Unreleased](https://github.com/<user>/<repo>/compare/...HEAD)
-## [<vers>](https://github.com/<user>/<repo>/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
-## [<vers>](https://github.com/<user>/<repo>/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
+## [Unreleased](https://github.com/<<user>>/<<repo>>/compare/...HEAD)
+## [<vers>](https://github.com/<<user>>/<<repo>>/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
+## [<vers>](https://github.com/<<user>>/<<repo>>/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
 
 ### Added
 
@@ -48,7 +48,7 @@ SECTIONS
 MILESTONES
 ´´´´´´´´´
 
-**[d<X.Y>-<label>-<Z>](https://github.com/<user>/<repo>/compare/d<X.Y>-<label>-<N>...<base-tag>**
+**[d<X.Y>-<label>-<Z>](https://github.com/<<user>>/<<repo>>/compare/d<X.Y>-<label>-<N>...<base-tag>**
 
 -->
 <!--
@@ -71,7 +71,7 @@ The step below finalizes the release's changelog. It should be the last commit o
     [   ]  MODIFY the comparison settings from `...HEAD` to `<to-that>...<this>`
 -->
 
-## [Unreleased](https://github.com/<user>/<repo>/compare/...HEAD)
+## [Unreleased](https://github.com/<<user>>/<<repo>>/compare/...HEAD)
 
 ### Added
 
@@ -102,7 +102,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ---
 
-## [Seed](https://github.com/<user>/<repo>/releases/tag/v0.0.1) &nbsp;-&nbsp; <2025-06-07>
+## [Seed](https://github.com/<<user>>/<<repo>>/releases/tag/v0.0.1) &nbsp;-&nbsp; <2025-06-07>
 
 Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github), which provides:
 

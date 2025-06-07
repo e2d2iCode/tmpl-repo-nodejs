@@ -82,7 +82,8 @@ The step below finalizes the release's changelog. It should be the last commit o
 - Husky support: dependency + [.husky/](.husky/.fs-info) folder
 - Git Hooks using Husky:
   - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit message conventions: dependency + [commitlint.config.js](commitlint.config.js)
-  - [`pre-commit`](pre-commit): formats and lints the code before committing
+  - [`pre-commit`](.husky/pre-commit): formats and lints the code before committing
+  - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
 
 ### Changed
 

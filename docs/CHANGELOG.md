@@ -85,6 +85,7 @@ The step below finalizes the release's changelog. It should be the last commit o
   - [`pre-commit`](.husky/pre-commit): formats and lints the code before committing
   - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
   - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
+  - [`post-merge`](.husky/pre-push): syncs dependencies after a merge
 
 ### Changed
 

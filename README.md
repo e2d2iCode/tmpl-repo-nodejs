@@ -9,9 +9,22 @@
 - [Installation](#installation)
   - [1. On GitHub](#1-on-github)
   - [2. Clone your new repository](#2-clone-your-new-repository)
-  - [2. Update/Customize Files](#2-updatecustomize-files)
-  - [4. Set up platform-specific requirements](#4-set-up-platform-specific-requirements)
+  - [3. Configure/Customize The Template](#3-configurecustomize-the-template)
+  - [4. Install Dependencies & Prepare](#4-install-dependencies--prepare)
 - [Features](#features)
+  - [NodeJS-Specifc Features](#nodejs-specifc-features)
+    - [Pre-configured `package.json`](#pre-configured-packagejson)
+    - [NodeJS-friendly `.gitignore`](#nodejs-friendly-gitignore)
+    - [ESLint Support](#eslint-support)
+    - [Prettier Support](#prettier-support)
+    - [Jest Support](#jest-support)
+    - [Git Hooks Support](#git-hooks-support)
+      - [The `pre-push` Hook](#the-pre-push-hook)
+      - [The `commit-msg`](#the-commit-msg)
+      - [The `pre-commit`](#the-pre-commit)
+      - [The `post-merge`](#the-post-merge)
+      - [The `post-checkout`](#the-post-checkout)
+  - [Folder Metadata with `.fs-info` Files](#folder-metadata-with-fs-info-files)
   - [Pre-configured Standard Repository Files](#pre-configured-standard-repository-files)
     - [Root Level Files](#root-level-files)
     - [Standard Repository Folders](#standard-repository-folders)
@@ -24,7 +37,6 @@
         - [`.github/workflows/`](#githubworkflows)
         - [`.github/ISSUE_TEMPLATE/`](#githubissue_template)
         - [`.github/copilot/`](#githubcopilot)
-  - [Folder Metadata with `.fs-info` Files](#folder-metadata-with-fs-info-files)
 - [Contributing](#contributing)
 - [License](#license)
 - [Roadmap](#roadmap)
@@ -211,7 +223,6 @@ This template includes a set of standard repository files to help you maintain b
 - [**`SECURITY.md`**](SECURITY.md): Security policy and vulnerability reporting process.
 - [**`CHANGELOG.md`**](CHANGELOG.md): Track changes, releases, and updates.
 - [**`.env.required`**](.env.required): Template for required environment variables.
-  _Update to list all environment variables your project needs. THIS FILE GETS COMMITTED._
 - [**`.env`**](.env): Actual environment variable values for local development.
 - [**`.env.example`**](.env.example): A template for required environment variables.
 - [**`.gitattributes`**](.gitattributes): Defines file handling attributes for Git, such as line endings normalization, diff settings, and linguist overrides. Helps maintain cross-platform consistency and proper file treatment in the repository.

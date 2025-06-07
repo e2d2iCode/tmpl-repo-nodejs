@@ -78,6 +78,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 - A generic [`package.json`](package.json) file with e2__placeholders__2e
 - EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint Extension
 - Prettier: dependency + [`.prettierrc`](.prettierrc) + [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
+- Jest framework for testing: dependency + [`jest.config.js](jest.config.js)
 
 ### Changed
 

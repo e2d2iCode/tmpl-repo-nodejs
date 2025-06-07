@@ -24,4 +24,6 @@ reported vulnerability, what to expect if the exposure is accepted or
 declined, etc.
 -->
 
-Please use the [GitHub Issue Tracker](https://github.com/<<user>>/<<repo>>/issues) to report vulnerabilities.
+Please use the
+[GitHub Issue Tracker](https://github.com/<<user>>/<<repo>>/issues) to report
+vulnerabilities.

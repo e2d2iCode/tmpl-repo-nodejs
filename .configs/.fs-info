@@ -1,0 +1,72 @@
+<!-- .configs/.fs-info -->
+
+# FS-INFO - Centralized Configuration Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.configs/` folder centralizes all configuration files for code formatting, linting, testing, and other development tools. This organization keeps the project root clean and makes it easy to locate and manage configuration resources.
+
+## Folder's Role
+
+The `.configs/` folder plays a key role in maintaining a consistent and organized configuration structure for the project. By grouping all tool and utility configs in one place, it simplifies updates, onboarding, and tool integration, and helps ensure that all contributors use the same settings.
+
+## Folder's Typical Content
+
+This folder contains configuration files for various tools and utilities used in the project.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.configs/` folder:
+
+```plaintext
+.configs/
+├── .editorconfig
+├── .eslintrc.json
+├── .markdownlint.json
+├── .prettierrc
+├── .watchmanconfig
+├── commitlint.config.js
+├── jest.config.js
+└── .fs-info
+```
+
+The following sections provide a comprehensive overview of the files within the `.configs/` directory.
+
+### Files Description
+
+The typical files to be found in the `.configs/` folder are as follows.
+
+#### The `.editorconfig` file
+
+Defines coding style and formatting rules for supported editors and IDEs.
+
+#### The `.eslintrc.json` file
+
+Specifies linting rules and settings for ESLint.
+
+#### The `.markdownlint.json` file
+
+Configures rules for Markdown linting.
+
+#### The `.prettierrc` file
+
+Specifies code formatting rules for Prettier.
+
+#### The `.watchmanconfig` file
+
+Configures Watchman file watching behavior.
+
+#### The `commitlint.config.js` file
+
+Defines commit message linting rules for Commitlint.
+
+#### The `jest.config.js` file
+
+Specifies configuration for the Jest testing framework.
+
+### Subfolders Description
+
+The `.configs/` folder doesn't contain any subfolder.

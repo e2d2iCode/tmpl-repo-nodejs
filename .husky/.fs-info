@@ -1,0 +1,60 @@
+<!-- .husky/.fs-info -->
+# FS-INFO - Husky Git Hooks Folder
+
+!!!Note
+    This file provides an overview of the folder's role and **typical** content. If available, a project-specific documentation is to be found in the folder's `README`.
+
+## Overview
+
+The `.husky/` folder is a central directory for managing Git hooks using [Husky](https://typicode.github.io/husky/). It contains scripts that are automatically executed at various points in the Git workflow, such as before commits or pushes. This helps enforce code quality, run tests, or perform other automated checks before changes are accepted into the repository.
+
+By centralizing Git hooks, the `.husky/` folder ensures that all contributors follow the same automated checks and processes, improving code consistency and reducing errors.
+
+## Folder's Role
+
+The `.husky/` folder plays a crucial role in automating and enforcing project workflows at the Git level. It contains hook scripts that run at specific Git lifecycle events (e.g., `pre-commit`, `pre-push`). These scripts can be used to run linters, formatters, tests, or any custom logic required before code is committed or pushed.
+
+This automation helps maintain code quality, prevents common mistakes, and ensures that all contributors adhere to the project's standards.
+
+## Folder's Typical Content
+
+This folder contains shell scripts for each Git hook you want to use. Each script is named after the corresponding Git hook and contains the commands to execute.
+
+### Folder's Typical Tree Structure
+
+Below is the typical structure of the `.husky/` folder:
+
+```tree
+.husky/
+├── pre-commit         # Runs before a commit is finalized (e.g., lint, format, test)
+├── pre-push           # Runs before a push is executed (e.g., run tests)
+├── commit-msg         # Runs on commit message (e.g., validate message format)
+├── _/                 # Internal Husky scripts (do not edit manually)
+└── .fs-info           # Documentation for the .husky/ folder
+```
+
+The following sections provide a comprehensive overview of the files and subfolders within the `.husky/` directory.
+
+### Files Description
+
+This section provides a detailed explanation of each file within the `.husky/` folder. It outlines their purpose, key responsibilities, and how they contribute to the overall functionality of the folder.
+
+#### pre-commit
+
+A script that runs before a commit is created. Common uses include running linters, formatters, or tests to ensure code quality before changes are committed.
+
+#### pre-push
+
+A script that runs before code is pushed to a remote repository. Often used to run tests or other checks to prevent broken code from being pushed.
+
+#### commit-msg
+
+A script that runs to validate the commit message format, ensuring that all commit messages follow the project's conventions.
+
+#### _
+
+An internal directory used by Husky for its own scripts and configuration. This folder is managed by Husky and should not be edited manually.
+
+### Customization
+
+You can add or modify hook scripts as needed for your project's workflow. Each script should be executable and contain the commands you want to run for that Git hook.

@@ -8,7 +8,8 @@
     "dev": "nodemon src/index.js",
     "test": "echo \"No test specified\" && exit 0",
     "lint": "eslint .",
-    "build": "echo \"No build step defined\""
+    "build": "echo \"No build step defined\"",
+    "format": "prettier --write ."
   },
   "keywords": [
     "e2__project-keywords__2e"
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.0.0",
+    "prettier": "^3.0.0"
   }
 }

@@ -76,7 +76,8 @@ The step below finalizes the release's changelog. It should be the last commit o
 ### Added
 
 - A generic [`package.json`](package.json) file with e2__placeholders__2e
-- A EsLint support via [`.eslintrc.json`](.eslintrc.json) file & VSC's EsLint extension
+- EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint Extension
+- Prettier: dependency + [`.prettierrc`](.prettierrc) + [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
 
 ### Changed
 

@@ -6,6 +6,7 @@
     "github.copilot-chat",
     "eamodio.gitlens",
     "xyz.local-history",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
   ]
 }

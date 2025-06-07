@@ -91,7 +91,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ### Fixed
 
-- ...
+- Set placeholders to the `CHANGELOG` template (root-level)
 
 ### Security
 

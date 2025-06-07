@@ -15,9 +15,9 @@ ___  TEMPLATE     ______________________________________________________________
 
 SECTIONS
 ´´´´´´´´´´
-## [Unreleased](https://github.com/<<user>>/<<repo>>/compare/...HEAD)
-## [<vers>](https://github.com/<<user>>/<<repo>>/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
-## [<vers>](https://github.com/<<user>>/<<repo>>/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
+## [Unreleased](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/...HEAD)
+## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
+## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
 
 ### Added
 
@@ -48,7 +48,7 @@ SECTIONS
 MILESTONES
 ´´´´´´´´´
 
-**[d<X.Y>-<label>-<Z>](https://github.com/<<user>>/<<repo>>/compare/d<X.Y>-<label>-<N>...<base-tag>**
+**[d<X.Y>-<label>-<Z>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/d<X.Y>-<label>-<N>...<base-tag>**
 
 -->
 <!--
@@ -62,24 +62,36 @@ The first 3 steps below should be taken eright on the `develop` branch, right be
 
     [   ]  REPLACE [Unreleased] by the last release's next version
 
-    [   ]  ADD today's date in the format YYYY-MM-DD, 2025-12-31
+    [   ]  ADD today's date in the format YYYY-MM-DD
 
     [   ]  REPLACE [Unreleased] by the last release's next version
 
 The step below finalizes the release's changelog. It should be the last commit on the `release` branch before the final merge happens.
 
-    [   ]  MODIFY the comparison settings from `...HEAD` to `<base_vers>...<this_vers>`
+    [   ]  MODIFY the comparison settings from `...HEAD` to `<to-that>...<this>`
 -->
 
-## [Unreleased](https://github.com/<<user>>/<<repo>>/compare/...HEAD)
+## [v1.0.0](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1...v1.0.0) &nbsp;-&nbsp; 2025-06-07
 
 ### Added
 
-- ...
+- A generic [`package.json`](package.json) file with e2__placeholders__2e
+- EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint Extension
+- Prettier: dependency + [`.prettierrc`](.prettierrc) + [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
+- postcss dependency for transforming CSS with JavaScript plugins
+- Jest framework for testing: dependency + [`jest.config.js](jest.config.js) + jest-environment-jsdom dependency
+- Husky support: dependency + [.husky/](.husky/.fs-info) folder
+- Git Hooks using Husky:
+  - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
+  - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit message conventions: dependency + [commitlint.config.js](commitlint.config.js)
+  - [`pre-commit`](.husky/pre-commit): formats and lints the code before committing
+  - [`post-merge`](.husky/pre-push): syncs dependencies after a merge
+  - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
 
 ### Changed
 
-- ...
+- Update [`README`](README.md) with NodeJs-Specific features
+- Update [`.watchmanconfig`](.watchmanconfig) to ignore `node_modules/` folder
 
 ### Deprecated
 
@@ -91,7 +103,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ### Fixed
 
-- ...
+- Set placeholders to the `CHANGELOG` template (root-level)
 
 ### Security
 
@@ -99,7 +111,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ---
 
-## [Seed](https://github.com/<<user>>/<<repo>>/releases/tag/v0.0.1) &nbsp;-&nbsp; <<yyyy-mm-dd>>
+## [Seed](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1) &nbsp;-&nbsp; 2025-06-07
 
 Seeded from [tmpl-repo-github](https://github.com/e2d2iCode/tmpl-repo-github), which provides:
 

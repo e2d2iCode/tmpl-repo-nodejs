@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.cache/
+.next/
+.tmp/
+tmp/
+.eslintcache
+.vscode/
+logs/
+out/
+.serverless/

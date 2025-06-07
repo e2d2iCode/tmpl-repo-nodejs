@@ -79,6 +79,7 @@ The step below finalizes the release's changelog. It should be the last commit o
 
 ### Changed
 
+- Update [`README`](README.md) with NodeJs-Specific features
 - Update [`.watchmanconfig`](.watchmanconfig) to ignore `node_modules/` folder
 
 ### Deprecated

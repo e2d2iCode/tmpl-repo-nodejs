@@ -1,5 +1,5 @@
 <!-- README.md -->
-# README - Generic GitHub Template
+# README - GitHub Template for NodeJS Projects
 
 ## Table of Contents
 
@@ -7,10 +7,10 @@
   - [Key goals](#key-goals)
   - [Target audience](#target-audience)
 - [Installation](#installation)
-  - [On GitHub](#on-github)
-  - [Clone your new repository](#clone-your-new-repository)
-  - [Update/Customize Files](#updatecustomize-files)
-  - [Set up platform-specific requirements](#set-up-platform-specific-requirements)
+  - [1. On GitHub](#1-on-github)
+  - [2. Clone your new repository](#2-clone-your-new-repository)
+  - [2. Update/Customize Files](#2-updatecustomize-files)
+  - [4. Set up platform-specific requirements](#4-set-up-platform-specific-requirements)
 - [Features](#features)
   - [Pre-configured Standard Repository Files](#pre-configured-standard-repository-files)
     - [Root Level Files](#root-level-files)
@@ -22,7 +22,7 @@
       - [The `/__tests__`](#the-__tests__)
       - [The `.github/`](#the-github)
         - [`.github/workflows/`](#githubworkflows)
-        - [`.github/ISSUE_TEMPLATE/`](#githubissuetemplate)
+        - [`.github/ISSUE_TEMPLATE/`](#githubissue_template)
         - [`.github/copilot/`](#githubcopilot)
   - [Folder Metadata with `.fs-info` Files](#folder-metadata-with-fs-info-files)
 - [Contributing](#contributing)
@@ -35,14 +35,14 @@ This template provides a generic GitHub repository ready to hold a wide variety 
 
 ### Key goals
 
-This template is designed to help you quickly launch projects with a focus on
+This template is designed to help you quickly launch NodeJS projects with a focus on
 
-- Providing a standardized, language-agnostic project structure that is easy to understand and extend.
-- Accelerating project setup by including essential configuration, documentation, and best-practices files out of the box.
-- Supporting multi-platform and multi-language development with minimal friction.
-- Promoting code reuse, maintainability, and clarity across different environments and teams.
+- Providing a standardized, NodeJS-centric project structure that is easy to understand and extend.
+- Accelerating NodeJS project setup by including essential configuration, documentation, and best-practices files out of the box.
+- Supporting modern NodeJS development with minimal friction.
+- Promoting code reuse, maintainability, and clarity across different NodeJS environments and teams.
 - Reducing onboarding time for new contributors by documenting folder purposes and workflows.
-- Enabling rapid prototyping, validation, and deployment for a wide range of project types.
+- Enabling rapid prototyping, validation, and deployment for a wide range of NodeJS project types.
 
 ### Target audience
 
@@ -85,13 +85,10 @@ The following files REQUIRE modifications to reflect your project:
 
 - [CHANGELOG](CHANGELOG.md): this file contains a link to your repository, which `<username>` and `<repository>` placeholders require to be replaced by your project's specific data.
 
-
-
 ```sh
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
 ```
-
 
 ### 4. Set up platform-specific requirements
 
@@ -277,7 +274,6 @@ Contributions are welcome! Please open issues or submit pull requests to help im
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
-
 
 ## Roadmap
 

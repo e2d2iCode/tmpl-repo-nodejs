@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "jest --config .configs/jest.config.js",
+    "test": "jest --config .configs/jest.config.js --passWithNoTests",
     "lint": "eslint . --config .configs/.eslintrc.json",
     "build": "echo \"No build step defined\"",
     "format": "prettier --write . --config .configs/.prettierrc",

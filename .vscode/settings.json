@@ -17,4 +17,9 @@
     "!**/.git",
     "!**/vendor"
   ],
+  "prettier.proseWrap": "always",
+  "prettier.singleQuote": true,
+  "editor.wordWrap": "bounded",
+  "editor.wrappingIndent": "deepIndent",
+  "editor.tabSize": 2,
 }

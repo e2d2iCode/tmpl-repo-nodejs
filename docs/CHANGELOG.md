@@ -1,3 +1,4 @@
+<!-- docs/CHANGELOG.md -->
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD033 -->
 
@@ -9,19 +10,58 @@ All notable changes to this project will be documented in this file.
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
 [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.1) &nbsp;-&nbsp; 2025-06-07
+
+### Added
+
+- A documented `.config/` folder for hosting the config files that can be:
+  - `.prettierrc`
+  - `.eslintrc.json`
+  - `jest.config.js`
+  - `markdownlint.json`
+  - `.commitlint.config.json`
+- A `.config/_DEVDOC.md` file documenting all configs, regardless of location
+- The `Markdown All In One` and `mardownlint` VSC exta in the recommendations
+
+### Changed
+
+- THE `CHANGELOG.md` TO AN OLD VERSION
+- THE `docs/CHANGELOG.md` TO AN OLD VERSION
+- The `README.md` file to match the last changes
+- The `markdownlint.json` file to apply all the rules
+- The wrapper used to italic text in Markdown from `*` to `_`
+- The `jest.config.js` file to explicitely specify the `rootDir` to be `..`
+- The `.commitlint.config.json` file to ignore msg starting with 'Merge branch'
+- The `test` script in `package.json` to add the `--passWithNoTests` flag to it
+- The `.vscode/settings` file to specify the location of the configuration files
+- The format (quoted globs) and contents (better categories) of
+  `.github/labeler`
+- The format of most `.md` and `.fs-info` files to make them Git hooks
+  compatible
+
+### Removed
+
+- The following files were removed from the root level and moved to `.config/`:
+  - `.prettierrc`
+  - `.eslintrc.json`
+  - `jest.config.js`
+  - `markdownlint.json`
+  - `.commitlint.config.json`
+
+### Fixed
+
+- The `pre-push` hook failing when there are no tests
+- The `commit-msg` hook failing when commiting a merge
+- The `pre-commit` hook failing due to badly formatted md files
+- The`.github/labeler` causing a`pre-commit` error due to non-quoted globs
+
 ## [v1.0.0](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1...v1.0.0) &nbsp;-&nbsp; 2025-06-07
 
 ### Added
 
-- A generic [`package.json`](package.json) file with e2**placeholders**2e
-- EsLint: dependency + [`.eslintrc.json`](.eslintrc.json) + VSC's ESLint
-  Extension
-- Prettier: dependency + [`.prettierrc`](.prettierrc) +
-  [`.prettierignorec`](.prettierignorec) + VSC's Prettier Extension
-- postcss dependency for transforming CSS with JavaScript plugins
-- Jest framework for testing: dependency + [`jest.config.js](jest.config.js) +
-  jest-environment-jsdom dependency
-- Husky support: dependency + [.husky/](.husky/.fs-info) folder
+- Testing framework: `Jest` with `jsdom`
+- Code quality features: `EsLint` and `Prettier`
+- A generic `package.json` file with placeholders and standard scripts
 - Git Hooks using Husky:
   - [`pre-push`](.husky/pre-push): runs all tests before pushing to remote
   - [`commit-msg`](.husky/commit-msg): Uses `commitlint` to enforce commit
@@ -31,27 +71,21 @@ All notable changes to this project will be documented in this file.
     committing
   - [`post-merge`](.husky/pre-push): syncs dependencies after a merge
   - [`post-checkout`](.husky/pre-push): syncs dependencies after a checkout
+- Git hooks with `husky`:
+  - `pre-push` runs all tests before pushing to remote
+  - `post-merge` synchronizes dependencies after a merge
+  - `pre-commit` formats and lints the code before committing
+  - `commit-msg` uses `commitlint` to enforce conventional commits
+  - `post-checkout` synchronizes dependencies after a branch checkout
 
 ### Changed
 
 - Update [`README`](README.md) with NodeJs-Specific features
 - Update [`.watchmanconfig`](.watchmanconfig) to ignore `node_modules/` folder
 
-### Deprecated
-
-- ...
-
-### Removed
-
-- ...
-
 ### Fixed
 
 - Set placeholders to the `CHANGELOG` template (root-level)
-
-### Security
-
-- ...
 
 ---
 

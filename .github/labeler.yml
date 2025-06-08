@@ -17,20 +17,12 @@ chore:
 
 docs:
   - docs/*
+  - _dev_stuff/*
   - _layouts/*
-  - .fs-info
   - README
-  - LICENSE
   - README.md
-  - LICENSE.md
   - CHANGELOG.md
-  - CONTRIBUTING.md
-  - CODE_OF_CONDUCT.md
-  - SECURITY.md
   - site.webmanifest
-
-scripts:
-  - scripts/*
 
 src:
   - src/*
@@ -38,18 +30,21 @@ src:
 specs:
   - spec/*
 
-github-templates:
-  - .github/PULL_REQUEST_TEMPLATE.md
-  - .github/ISSUE_TEMPLATE/*
+template:
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - SECURITY.md
+  - LICENSE.md
 
-github-config:
+git/github:
   - .github/*
   - .gitconfig
   - .gitattributes
   - .gitignore
 
-configs:
-  - .configs/*
-
-public:
-  - public/*
+issue-templates:
+  - .github/ISSUE_TEMPLATE/bug_report.md
+  - .github/ISSUE_TEMPLATE/feature_request.md
+  - .github/ISSUE_TEMPLATE/general_comment.md
+  - .github/ISSUE_TEMPLATE/misconduct_report.md
+  - .github/ISSUE_TEMPLATE/vulnerability_report.md

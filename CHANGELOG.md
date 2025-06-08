@@ -113,7 +113,7 @@ ___________________________________________________________________________
 NEW VERSION CHECKLIST (!!! Release Branch !!!)
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
 
-The first 3 steps below should be taken eright on the `develop` branch, right before the `telease` branch is created. If done on the `release` branch, then the changes should be merged back to the `develop` branch asap (before its changelog is updated with new entries, otherwise tconflicts will occur when the `release` branch is merged back to the `develop` branch).
+The first 3 steps below should be taken when on the `develop` branch, right before the `release` branch is created. If done on the `release` branch, then the changes should be merged back to the `develop` branch asap (before its changelog is updated with new entries, otherwise conflicts will occur when the `release` branch is merged back to the `develop` branch).
 
     [   ]  REPLACE [Unreleased] by the last release's next version
 

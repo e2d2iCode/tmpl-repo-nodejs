@@ -155,4 +155,3 @@ node_modules/** linguist-vendored
 *.vbproj      text eol=crlf merge=union
 *.fsproj      text eol=crlf merge=union
 *.dbproj      text eol=crlf merge=union
-*.fs-info text diff=markdown linguist-language=Markdown

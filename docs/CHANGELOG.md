@@ -38,7 +38,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.1) &nbsp;-&nbsp; 2025-06-07
+## [v1.0.2](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.1...v1.0.2) &nbsp;-&nbsp; 2025-06-08
+
+### Changed
+
+- The `docs/CHANGELOG.md` file to reflect the project's history
+- The `CHANGELOG.md` file for its `Seed` section describe the current template
+
+### Fixed
+
+- The `docs/CHANGELOG.md` file doesn't reflect the project's history
+- The `CHANGELOG.md` template not specifying the correct `Seed` contents
+
+## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.0...v1.0.1) &nbsp;-&nbsp; 2025-06-07
 
 ### Added
 
@@ -55,8 +67,8 @@ All notable changes to this project will be documented in this file.
 
 - THE `CHANGELOG.md` TO AN OLD VERSION
 - THE `docs/CHANGELOG.md` TO AN OLD VERSION
-- The `README.md` file to match the last changes
-- The `markdownlint.json` file to apply all the rules
+- The `README.md` file to match the changes
+- The `markdownlint.json` file to ignore no rule
 - The wrapper used to italic text in Markdown from `*` to `_`
 - The `jest.config.js` file to explicitely specify the `rootDir` to be `..`
 - The `.commitlint.config.json` file to ignore msg starting with 'Merge branch'

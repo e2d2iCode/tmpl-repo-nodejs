@@ -181,91 +181,23 @@ workflows.
 
 #### Pre-configured `package.json`
 
-The [`package.json`](package.json) comes with sensible defaults for scripts,
+The [``package.json`](package.json) comes with sensible defaults for scripts,
 dependencies, and metadata fields. Placeholders are provided for project name,
 description, author, license, and keywords, making it easy to customize for your
 project.
 
-##### The `start` Script
+It also provides the following scripts, which can be easily extended or
+customized
 
-Runs the main application in production mode using NodeJS. By default, this
-executes `node src/index.js`. You can customize the entry point in your
-`package.json` as needed. Use this script to launch your app in environments
-where hot-reloading and development tools are not required.
-
-##### The `dev` Script
-
-Starts the application in development mode with hot-reloading enabled (using
-[nodemon](https://nodemon.io/)).
-
-This script runs `nodemon src/index.js` by default, automatically restarting the
-app when source files change. You can customize the entry point or nodemon
-configuration as needed for your development workflow.
-
-##### The `test` Script
-
-Executes the project's test suite using
-[Jest](https://jestjs.io/docs/getting-started).
-
-Configuration can be changed as needed in the Jest config file at
-[`.configs/jest.config.js`](.configs/jest.config.js).
-
-##### The `lint` Script
-
-Checks the code for linting errors using [ESLint](https://eslint.org/).
-
-Configuration can be changed as needed in the ESLint config file at
-[`.configs/.eslintrc.json`](.configs/.eslintrc.json). You can extend or
-customize the rules and plugins in this file to match your project's coding
-standards.
-
-##### The `build` Script
-
-Placeholder for build steps; customize as needed for your project.
-
-By default, this script simply echoes "No build step defined". You should update
-this script to include any build processes required for your project, such as
-transpiling code (e.g., using Babel or TypeScript), bundling assets, or
-preparing files for deployment.
-
-Typical usage might involve compiling source files, copying static assets, or
-running other pre-deployment tasks.
-
-##### The `format` Script
-
-Formats the codebase using [Prettier](https://prettier.io/) or the configured
-formatter.
-
-Configuration can be changed as needed in the Prettier config file at
-[`.configs/.prettierrc`](.configs/.prettierrc). In addition, the
-[`.prettierignore`](.prettierignore) file at the project's root-level can be
-used to exclude files or folders from formatting.
-
-You can extend or customize the formatting rules in this file to match your
-project's style preferences (e.g., tab width, semicolons, quotes, trailing
-commas).
-
-Prettier can be run manually via `npm run format` or automatically as part of
-the pre-commit workflow to enforce formatting before code is committed.
-
-Editor plugins are available for on-save formatting, and you can use
-`.prettierignore` to exclude files or folders from formatting.
-
-##### The `prepare` Script
-
-Runs tasks needed before publishing or installing dependencies (e.g., Husky
-hooks setup). This script is executed automatically by npm and yarn after
-running `npm install` or `yarn install`, and before the package is packed and
-published.
-
-By default, it is used to set up Git hooks (such as Husky) to automate checks
-like linting, formatting, and testing before commits and pushes. You can
-customize this script to include any setup steps required for your project, such
-as compiling native modules, generating code, or preparing assets.
-
-The `prepare` script is especially useful for ensuring that contributors and CI
-environments have all necessary hooks and setup steps applied automatically
-after installing dependencies.
+- **`start`**: Runs the main application in production mode.
+- **`dev`**: Starts the application in development mode with hot-reloading (if
+  configured).
+- **`test`**: Executes the project's test suite.
+- **`lint`**: Checks the code for linting errors using ESLint.
+- **`format`**: Formats the codebase using Prettier or the configured formatter.
+- **`prepare`**: Runs tasks needed before publishing or installing dependencies
+  (e.g., Husky hooks setup). That command is run automatically after
+  `npm install` or `yarn install` is invoked.
 
 #### NodeJS-friendly `.gitignore`\*\*
 
@@ -275,20 +207,22 @@ environment files, reducing accidental commits of unwanted files.
 #### ESLint Support
 
 The template includes a pre-configured ESLint setup for consistent code quality
-and style enforcement. The configuration is located in `.configs/.eslintrc.json`
-and can be extended to include plugins (such as `eslint-plugin-node`,
-`eslint-plugin-import`, `eslint-config-prettier`, etc.) or custom rules as
-needed. ESLint is integrated with most editors for real-time feedback and can be
-run manually via `npm run lint` or automatically as a pre-commit hook (via
-Husky). The setup supports linting for both JavaScript and TypeScript if needed,
-and can be further customized for your project's coding standards.
+and style enforcement. It comes with recommended rules for NodeJS, including
+support for modern JavaScript features and best practices. The configuration is
+located in `.eslintrc` or `.eslintrc.json` and can be extended to include
+plugins (such as `eslint-plugin-node`, `eslint-plugin-import`,
+`eslint-config-prettier`, etc.) or custom rules as needed. ESLint is integrated
+with most editors for real-time feedback and can be run manually via
+`npm run lint` or automatically as a pre-commit hook (via Husky). The setup
+supports linting for both JavaScript and TypeScript if needed, and can be
+further customized for your project's coding standards.
 
 #### Prettier Support
 
 Prettier is integrated for automatic code formatting, ensuring a consistent code
-style across the project. The configuration is provided in
-`.configs/.prettierrc` or within `package.json` under the `prettier` key, and
-can be customized to match your team's preferences (e.g., tab width, semicolons,
+style across the project. The configuration is provided in `.prettierrc`,
+`.prettierrc.json`, or within `package.json` under the `prettier` key, and can
+be customized to match your team's preferences (e.g., tab width, semicolons,
 single/double quotes, trailing commas). Prettier works alongside ESLint (with
 `eslint-config-prettier` to avoid conflicts) and can be run via `npm run format`
 or as part of the pre-commit workflow to enforce formatting before code is
@@ -296,20 +230,11 @@ committed. Editor plugins are available for on-save formatting, and Prettier can
 be extended with ignore files (`.prettierignore`) to exclude files or folders
 from formatting.
 
-#### Markdownlint Support
-
-Markdownlint is configured for consistent Markdown style and formatting. The
-configuration is provided in
-[`.configs/.markdownlint.json`](.configs/.markdownlint.json) and can be
-customized to match your team's documentation standards. Markdownlint can be run
-manually or integrated with editors and CI pipelines to enforce Markdown best
-practices.
-
 #### Jest Support
 
 Jest is set up as the default testing framework, providing a robust environment
 for writing and running unit and integration tests. Example configuration and
-scripts are included in `.configs/jest.config.js`.
+scripts are included.
 
 The `__tests__/` folder is dedicated to end-to-end (E2E) tests. All E2E test
 suites, utilities, and configuration files should be placed here. Unit tests
@@ -413,8 +338,6 @@ project:**
 - [**`.fs-info`**](.fs-info): Describes the purpose and typical contents of the
   project root folder. Each major folder in the template includes a `.fs-info`
   file to document its intended role and usage.
-- [**`.configs/.markdownlint.json`**](.configs/.markdownlint.json): Markdownlint
-  configuration for enforcing Markdown style and formatting.
 
 #### Standard Repository Folders
 

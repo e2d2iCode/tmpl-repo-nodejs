@@ -18,7 +18,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- ...
+- The `.husky/commit-mg` hook to get its config from `.config/`
 
 ### Deprecated
 
@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
-- ...
+- The `commit-mg` hook not getting its config from `.config/`
 
 ### Security
 

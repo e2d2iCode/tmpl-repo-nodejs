@@ -26,7 +26,7 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
-- ...
+- The root level config files redundant with these in `.config/`
 
 ### Fixed
 

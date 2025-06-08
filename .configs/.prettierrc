@@ -4,5 +4,11 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "printWidth": 80,
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "*.fs-info",
+      "parser": "markdown"
+    }
+  ]
 }

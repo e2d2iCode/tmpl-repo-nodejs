@@ -5,11 +5,8 @@ this project, both at the root level and within the `.configs/` folder. For each
 file, you will find an explanation of the currently used parameters, possible
 alternative values, and a link to the official documentation._
 
-<!-- omit from toc -->
+## Table Of Contents <!-- omit from toc -->
 
-## Table Of Contents
-
-- [Table Of Contents](#table-of-contents)
 - [Root-Level Config Files](#root-level-config-files)
   - [.editorconfig](#editorconfig)
   - [.watchmanconfig](#watchmanconfig)

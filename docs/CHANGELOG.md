@@ -9,108 +9,6 @@ All notable changes to this project will be documented in this file.
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
 [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
 
-<!-- SECTIONS' TEMPLATES ---
-
-## [Unreleased](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/...HEAD)
-
-## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
-
-## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
-
-### Added
-
-- ...
-
-### Changed
-
-- ...
-
-### Deprecated
-
-- ...
-
-### Removed
-
-- ...
-
-### Fixed
-
-- ...
-
-### Security
-
-- ...
-
--->
-<!-- MILESTONES' TEMPLATE  ---
-
-**[d<X.Y>-<label>-<Z>](<https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/d><X.Y>-<label>-<N>...<base-tag>**
-
--->
-<!-- NEW VERSION CHECKLIST (!!! Release Branch !!!)  ---
-
-The first 3 steps below should
-be taken eright on the `develop` branch, right before the `telease` branch is
-created. If done on the `release` branch, then the changes should be merged back
-to the `develop` branch asap (before its changelog is updated with new entries,
-otherwise tconflicts will occur when the `release` branch is merged back to the
-`develop` branch).
-
-    [   ]  REPLACE [Unreleased] by the last release's next version
-
-    [   ]  ADD today's date in the format YYYY-MM-DD
-
-    [   ]  REPLACE [Unreleased] by the last release's next version
-
-The step below finalizes the release's changelog. It should be the last commit
-on the `release` branch before the final merge happens.
-
-    [   ]  MODIFY the comparison settings from `...HEAD` to `<to-that>...<this>`
-
--->
-
-## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.0...v1.0.1) &nbsp;-&nbsp; 2025-06-07
-
-### Added
-
-- Centralized configuration files in a new `.configs/` folder:
-  - `.eslintrc.json`, `.prettierrc`, `.markdownlint.json`, `jest.config.js`,
-    `commitlint.config.js`, `.editorconfig`, `.watchmanconfig`
-- VS Code workspace settings to reference configs in `.configs/`
-- Markdownlint configuration and documentation references
-- `.gitattributes` and VS Code settings to treat `.fs-info` files as Markdown
-- Added and documented `.fs-info` files for conceptual folders
-- Added `eslint-plugin-markdown` as a devDependency for Markdown linting support
-
-### Changed
-
-- Updated all scripts in `package.json` to use config files from `.configs/`
-- Updated documentation and `.fs-info` files to reflect new config file
-  locations
-- Updated VS Code `.vscode/settings.json` for Prettier, ESLint, and Markdownlint
-  config paths and file associations
-- Improved `README` to document new config structure and Markdownlint support
-- Updated `.prettierrc` to remove unsupported options and keep only Prettier
-  settings
-- Updated `.markdownlint.json` to enforce asterisk for emphasis (`MD049`) and
-  disable line-length (`MD013`)
-- Updated Husky hooks and commitlint config to use `.configs/` location
-
-### Removed
-
-- Removed references to config files from the project root (now in `.configs/`)
-- Removed the `github/labeller.yml` action
-
-### Fixed
-
-- Fixed Prettier, ESLint, and Markdownlint integration to work with centralized
-  configs
-- Fixed documentation and changelog links to configuration files
-- Fixed YAML syntax in `.github/labeler.yml` (quoted glob patterns)
-- Fixed missing dependencies for ESLint plugins (e.g., `eslint-plugin-markdown`)
-- Fixed Husky pre-commit and commit-msg hooks to avoid message/content
-  transformation
-
 ## [v1.0.0](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v0.0.1...v1.0.0) &nbsp;-&nbsp; 2025-06-07
 
 ### Added
@@ -139,9 +37,21 @@ on the `release` branch before the final merge happens.
 - Update [`README`](README.md) with NodeJs-Specific features
 - Update [`.watchmanconfig`](.watchmanconfig) to ignore `node_modules/` folder
 
+### Deprecated
+
+- ...
+
+### Removed
+
+- ...
+
 ### Fixed
 
 - Set placeholders to the `CHANGELOG` template (root-level)
+
+### Security
+
+- ...
 
 ---
 
@@ -180,3 +90,67 @@ which provides:
   - [Greetings action](.github/gretteings.yml),
   - [Dependabot configuration](.github/dependabot.yml),
   - [Copilot instructions and prompts](.github/copilot/.fs-info)
+
+<!-- markdownlint-disable -->
+<!-- TENPLATES
+
+___________________________________________________________________________
+
+SECTIONS' TEMPLATES
+´´´´´´´´´´´´´´´´´´´
+
+## [Unreleased](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/...HEAD)
+
+## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/<the-tag>) &nbsp;-&nbsp; <yyy-mm-dd>
+
+## [<vers>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/<to-that>...<this>) &nbsp;-&nbsp; <yyy-mm-dd>
+
+### Added
+
+- ...
+
+### Changed
+
+- ...
+
+### Deprecated
+
+- ...
+
+### Removed
+
+- ...
+
+### Fixed
+
+- ...
+
+### Security
+
+- ...
+
+___________________________________________________________________________
+
+MILESTONES' TEMPLLATE
+´´´´´´´´´´´´´´´´´´´´´
+
+**[d<X.Y>-<label>-<Z>](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/d<X.Y>-<label>-<N>...<base-tag>**
+
+___________________________________________________________________________
+
+NEW VERSION CHECKLIST (!!! Release Branch !!!)
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+
+The first 3 steps below should be taken eright on the `develop` branch, right before the `telease` branch is created. If done on the `release` branch, then the changes should be merged back to the `develop` branch asap (before its changelog is updated with new entries, otherwise tconflicts will occur when the `release` branch is merged back to the `develop` branch).
+
+    [   ]  REPLACE [Unreleased] by the last release's next version
+
+    [   ]  ADD today's date in the format YYYY-MM-DD, 2025-12-31
+
+    [   ]  REPLACE [Unreleased] by the last release's next version
+
+The step below finalizes the release's changelog. It should be the last commit on the `release` branch before the final merge happens.
+
+    [   ]  MODIFY the comparison settings from `...HEAD` to `<base_vers>...<this_vers>`
+
+-->

@@ -11,10 +11,16 @@
   "markdownlint.lintWorkspaceGlobs": [
     "**/*.md",
     "**/.fs-info",
+    "!**/.history",
     "!**/*.code-search",
     "!**/bower_components",
     "!**/node_modules",
     "!**/.git",
     "!**/vendor"
   ],
+  "prettier.proseWrap": "always",
+  "prettier.singleQuote": true,
+  "editor.wordWrap": "bounded",
+  "editor.wrappingIndent": "deepIndent",
+  "editor.tabSize": 2,
 }

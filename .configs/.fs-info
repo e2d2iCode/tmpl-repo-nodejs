@@ -23,14 +23,11 @@ Below is the typical structure of the `.configs/` folder:
 
 ```plaintext
 .configs/
-├── .editorconfig
 ├── .eslintrc.json
 ├── .markdownlint.json
 ├── .prettierrc
-├── .watchmanconfig
 ├── commitlint.config.js
-├── jest.config.js
-└── .fs-info
+└── jest.config.js
 ```
 
 The following sections provide a comprehensive overview of the files within the `.configs/` directory.
@@ -38,10 +35,6 @@ The following sections provide a comprehensive overview of the files within the 
 ### Files Description
 
 The typical files to be found in the `.configs/` folder are as follows.
-
-#### The `.editorconfig` file
-
-Defines coding style and formatting rules for supported editors and IDEs.
 
 #### The `.eslintrc.json` file
 
@@ -54,10 +47,6 @@ Configures rules for Markdown linting.
 #### The `.prettierrc` file
 
 Specifies code formatting rules for Prettier.
-
-#### The `.watchmanconfig` file
-
-Configures Watchman file watching behavior.
 
 #### The `commitlint.config.js` file
 

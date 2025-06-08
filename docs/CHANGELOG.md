@@ -10,6 +10,18 @@ All notable changes to this project will be documented in this file.
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
 [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
 
+## [v1.0.2](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.1...v1.0.2) &nbsp;-&nbsp; 2025-06-08
+
+### Changed
+
+- The `docs/CHANGELOG.md` file to reflect the project's history
+- The `CHANGELOG.md` file for its `Seed` section describe the current template
+
+### Fixed
+
+- The `docs/CHANGELOG.md` file doesn't reflect the project's history
+- The `CHANGELOG.md` template not specifying the correct `Seed` contents
+
 ## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.0...v1.0.1) &nbsp;-&nbsp; 2025-06-07
 
 ### Added

@@ -10,6 +10,34 @@ All notable changes to this project will be documented in this file.
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and
 [Semantic Versionning](https://semver.org/spec/v2.0.0.htmlspec/v2.0.0.html).
 
+## [Unreleased](https://github.com/e2d2iCode/tmpl-repo-nodejs/compare/...HEAD)
+
+### Added
+
+- ...
+
+### Changed
+
+- ...
+
+### Deprecated
+
+- ...
+
+### Removed
+
+- ...
+
+### Fixed
+
+- ...
+
+### Security
+
+- ...
+
+---
+
 ## [v1.0.1](https://github.com/e2d2iCode/tmpl-repo-nodejs/releases/tag/v1.0.1) &nbsp;-&nbsp; 2025-06-07
 
 ### Added

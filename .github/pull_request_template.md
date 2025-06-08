@@ -11,7 +11,8 @@
 - [ ] New feature (non-breaking change which adds functionality).
 - [ ] Enhancement (non-breaking change which enhances functionality)
 - [ ] Bug Fix (non-breaking change which fixes an issue).
-- [ ] Breaking change (fix or feature that would cause existing functionality to change).
+- [ ] Breaking change (fix or feature that would cause existing functionality to
+      change).
 
 ## Checklist
 

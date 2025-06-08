@@ -7,6 +7,8 @@
     "eamodio.gitlens",
     "xyz.local-history",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "davidanson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one"
   ]
 }

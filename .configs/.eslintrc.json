@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["eslint:recommended"],
+  "plugins": ["markdown"],
+  "overrides": [
+    {
+      "files": ["*.md", "*.fs-info"],
+      "processor": "markdown/markdown"
+    }
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
+}

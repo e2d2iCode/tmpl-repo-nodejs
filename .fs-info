@@ -24,6 +24,15 @@ The root folder contains a mix of files and subfolders, each serving a distinct 
 
 ```tree
 /
+├── .configs/                # Centralized configuration files
+│   ├── .editorconfig
+│   ├── .eslintrc.json
+│   ├── .markdownlint.json
+│   ├── .prettierrc
+│   ├── .watchmanconfig
+│   ├── commitlint.config.js
+│   ├── jest.config.js
+│   └── .fs-info
 ├── .git/                     # Git version control metadata
 ├── .github/                  # GitHub configuration and workflows
 ├── __tests__/                # Holder for the automated tests
@@ -36,7 +45,6 @@ The root folder contains a mix of files and subfolders, each serving a distinct 
 ├── .gitattributes            # Git attributes configuration
 ├── .gitconfig                # Git user/project configuration
 ├── .gitignore                # Git ignore rules
-├── .watchmanconfig           # Watchman configuration
 ├── CHANGELOG.md              # Project changelog
 ├── CODE_OF_CONDUCT.md        # Contributor code of conduct
 ├── CONTRIBUTING.md           # Contribution guidelines
@@ -350,3 +358,23 @@ Contains the source code of the application, serving as the foundation for the a
 
 - Organize code by feature or domain.
 - Follow consistent naming and structure conventions.
+
+#### .configs/
+
+Contains all configuration files for code formatting, linting, testing, and other tools. Centralizes project configuration for easier management.
+
+**Typical contents:**
+
+- `.editorconfig`: Editor configuration settings.
+- `.eslintrc.json`: ESLint configuration file.
+- `.markdownlint.json`: Markdown linting rules.
+- `.prettierrc`: Prettier configuration file.
+- `.watchmanconfig`: Watchman configuration file.
+- `commitlint.config.js`: Commit message linting rules.
+- `jest.config.js`: Jest testing framework configuration.
+- `.fs-info`: Folder structure information file.
+
+**Best practices:**
+
+- Keep configuration files organized and documented.
+- Use consistent formatting and naming conventions.

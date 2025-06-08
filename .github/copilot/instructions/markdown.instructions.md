@@ -1,36 +1,51 @@
 # Copilot Instructions - Markdown Filess
 
-The following instructions are designed to ensure that Markdown files are formatted consistently and clearly, adhering to specific guidelines for readability and maintainability. These instructions apply to all Markdown files, including the `.fs-info` files used for directory metadata.
+The following instructions are designed to ensure that Markdown files are
+formatted consistently and clearly, adhering to specific guidelines for
+readability and maintainability. These instructions apply to all Markdown files,
+including the `.fs-info` files used for directory metadata.
 
 ## Top Of The File
 
-Always start the file with a comment indicating the relative path to the current file, formatted as `<!-- << path-to-current-file >> -->`. This comment is used to identify the file's location within the project structure and is not part of the Markdown content.
+Always start the file with a comment indicating the relative path to the current
+file, formatted as `<!-- << path-to-current-file >> -->`. This comment is used
+to identify the file's location within the project structure and is not part of
+the Markdown content.
 
 ## Table of Contents and Linked Headings
 
-Upon every change to the structure of the document, Copilot MUST perform a document-wide search for linked headings and update them accordingly, such that they are always correctly labelled and point to the correct section.
+Upon every change to the structure of the document, Copilot MUST perform a
+document-wide search for linked headings and update them accordingly, such that
+they are always correctly labelled and point to the correct section.
 
 ## General Markdown Formatting:
 
 - Adhere to markdownlint rules unless explicitly instructed otherwise
 
-- Ensure the document is well-structured with headings, subheadings, and lists where appropriate.
+- Ensure the document is well-structured with headings, subheadings, and lists
+  where appropriate.
 
 - Use proper indentation and spacing for readability.
 
-- Stick to the markdownlint rules; if you cannot for whatever reason, wrap the concerned block into comment(s) pairs disabling and re-enabling the violated rule(s), repectively
+- Stick to the markdownlint rules; if you cannot for whatever reason, wrap the
+  concerned block into comment(s) pairs disabling and re-enabling the violated
+  rule(s), repectively
 
-- Make sure that a heading is never followed by another heading without some text in-between them. In particular, make sure to write a 2-3 lines paragraph after a heading and its first sub-heading.
+- Make sure that a heading is never followed by another heading without some
+  text in-between them. In particular, make sure to write a 2-3 lines paragraph
+  after a heading and its first sub-heading.
 
 - Do not use explicit `---` separators between sections
 
 - Add a blank line before and after:
 
-  - Each heading (except the first one in the document that should not have a blank line before it)
+  - Each heading (except the first one in the document that should not have a
+    blank line before it)
   - Each list (but not between list items, neither before sub-lists)
   - Each code block
 
-- Avoid collisions in headings: each heading MUST be unique across the whole document.
+- Avoid collisions in headings: each heading MUST be unique across the whole
+  document.
 
 ## Formatting Of Specific Contents
 
@@ -58,7 +73,8 @@ src/
 └── ...                               # Same applies everywhere...
 ```
 
-- Ensure subfolders are listed before files, and sort them by name length (shortest to longest).
+- Ensure subfolders are listed before files, and sort them by name length
+  (shortest to longest).
 
 ## Clarity and Consistency
 
@@ -67,21 +83,20 @@ src/
 
 ## Chat Specific Instructions
 
-The following rules apply only when Copilot is asked to provide the document's content in the chat, not when it is asked to edit the document:
+The following rules apply only when Copilot is asked to provide the document's
+content in the chat, not when it is asked to edit the document:
 
 ### Output Format
 
-- The document should start with ` ``` ` and end with ` ``` ` to indicate the full content is a code block.
+- The document should start with ` ``` ` and end with ` ``` ` to indicate the
+  full content is a code block.
 
 ### Inner Fenced Content
 
-- Replace standard triple backticks (` ``` `) with `&&&` for all fenced code blocks inside the document.
-- Example:
-  Instead of:
+- Replace standard triple backticks (` ``` `) with `&&&` for all fenced code
+  blocks inside the document.
+- Example: Instead of:
   ```tsx
   const example = 'code';
   ```
-  Use:
-  &&&tsx
-  const example = "code";
-  &&&
+  Use: &&&tsx const example = "code"; &&&

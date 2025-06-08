@@ -46,8 +46,10 @@ All notable changes to this project will be documented in this file.
 - The `.commitlint.config.json` file to ignore msg starting with 'Merge branch'
 - The `test` script in `package.json` to add the `--passWithNoTests` flag to it
 - The `.vscode/settings` file to specify the location of the configuration files
-- The format (quoted globs) and contents (better categories) of `.github/labeler`
-- The format of most `.md` and `.fs-info` files to make them Git hooks compatible
+- The format (quoted globs) and contents (better categories) of
+  `.github/labeler`
+- The format of most `.md` and `.fs-info` files to make them Git hooks
+  compatible
 
 ### Removed
 

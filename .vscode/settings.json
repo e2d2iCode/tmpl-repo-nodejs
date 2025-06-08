@@ -4,5 +4,17 @@
   "eslint.ignoreUntitled": true,
   "eslint.workingDirectories": [
     { "mode": "auto" }
-  ]
+  ],
+  "markdown.extension.completion.enabled": true,
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.print.theme": "dark",
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.md",
+    "**/.fs-info",
+    "!**/*.code-search",
+    "!**/bower_components",
+    "!**/node_modules",
+    "!**/.git",
+    "!**/vendor"
+  ],
 }
